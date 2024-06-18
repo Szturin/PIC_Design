@@ -68,7 +68,7 @@ unsigned char Test_Key_Read_Matrix()
 }
 
 /*PIC16F877A电平变换中断配置*/
-void RBIE_Init()
+void PIC_RBIE_Init()
 {
 	TRISB=0xF0;
 	nRBPU=0;

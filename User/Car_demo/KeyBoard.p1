@@ -1964,11 +1964,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 101 ]
 }
 "72
-[v _RBIE_Init `(v  1 ef ]
+[v _PIC_RBIE_Init `(v  1 ef ]
 {
-[; ;KeyBoard.c: 71: void RBIE_Init()
+[; ;KeyBoard.c: 71: void PIC_RBIE_Init()
 [; ;KeyBoard.c: 72: {
-[e :U _RBIE_Init ]
+[e :U _PIC_RBIE_Init ]
 [f ]
 [; ;KeyBoard.c: 73: TRISB=0xF0;
 "73

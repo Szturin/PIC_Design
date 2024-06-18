@@ -1,5 +1,5 @@
 
-# 1 "D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c"
+# 1 "D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c"
 
 # 82 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f877a.h"
 volatile unsigned char INDF @ 0x000;
@@ -1090,75 +1090,78 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 11 "D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c"
-unsigned char Speed_measure1;
-unsigned char Speed_measure2;
+# 4 "D:\6_pic_project\00_Design_Flow_Car\Driver\csb.h"
+void csb_init();
+unsigned int csb();
 
-# 20
-void Motor_GPIO_Init()
+# 3 "D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.h"
+void LCD1602_Delay();
+void LCD1602_WriteCommand(unsigned char Command);
+void LCD1602_WriteData(unsigned char Data);
+void LCD1602_Init(void);
+void LCD1602_WriteChar(unsigned char row,unsigned char column,unsigned char ch);
+void LCD1602_WriteString(unsigned char row,unsigned char column,unsigned char *String);
+int LCD1602_Pow(unsigned char X,unsigned char Y);
+void LCD1602_WriteNum(unsigned char row,unsigned char column,unsigned int number,unsigned char lenth);
+void LCD1602_GPIO_Init();
+
+# 8 "D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c"
+unsigned int dis;
+static volatile char table[16]={0x30,0x31,0x32,0x33,0x34,0x35,
+0x36,0x37,0x38,0x39,0x41,0x42,0x43,0x44,0x45,0x46};
+
+void Delay12us()
 {
-TRISB4=0;
-TRISB5=0;
-TRISB6=0;
-TRISB7=0;
-TRISC1=0;
-TRISC2=0;
+unsigned char i;
+_nop();
+_nop();
+i=20;
+while(i--);
 }
 
-void Motor_CCP_PWM_Init()
+void csb_init()
 {
+GIE=1;PEIE=1;TMR1IE=1;TMR1IF=0;
 
-CCP1CON=0X0C;
-CCPR1L=50;
-PR2=100;
+TRISE1=0;TRISE2=1;
+ADCON1=7;TRISA=0;TRISD=0;
 
+RA0 = 0;
+RA1 = 1;
 
-CCP2CON = 0x0c;
-CCPR2L = 50;
-
-
-T2CON=0;
-TMR2=0;
-TMR2ON=1;
+T1CON=0B00000000;
+TMR1H=0x00;
+TMR1L=0x00;
+TMR1ON=0x00;
 }
 
-# 53
-int Enconder_GetNum()
+unsigned int csb()
 {
+unsigned int time;
+unsigned char ah,al;
+dis = 0;
+TMR1ON = 0;
+TMR1H = 0x00;
+TMR1L = 0x00;
 
+RA0 = 1;
+Delay12us();
+RA0 = 0;
 
-}
-
-void Motor_Speed_Set(int Speed1,int Speed2)
+while(!RA1);
+TMR1ON=1;
+while(RA1 == 1 && TMR1IF == 0);
+ah = TMR1H;
+al = TMR1L;
+TMR1ON=0;
+if(TMR1IF == 0)
 {
-if(Speed1 > 0 )
-{
-RB4 = 1;
-RB5 = 0;
-CCPR1L=(unsigned char)Speed1;
+time = ah<<8|al;
+return (time*0.01723);
 }
 else
 {
-RB4 = 0;
-RB5 = 1;
-CCPR1L=(unsigned char)(-Speed1);
+TMR1IF = 0;
+return 0;
 }
-
-if(Speed2 >0 )
-{
-RB6 = 1;
-RB7 = 0;
-CCPR2L=(unsigned char)Speed2;
-}
-else
-{
-RB6 = 0;
-RB7 = 1;
-CCPR2L=(unsigned char)(-Speed2);
-}
-}
-int Trace_Proc()
-{
-
-# 141
 }

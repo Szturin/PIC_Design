@@ -1094,6 +1094,9 @@ extern void _delay(unsigned long);
 float filt_velocity=0;
 float last_filt_velocity=0;
 
+# 15
+unsigned char Trace_Byte;
+
 typedef struct
 {
 float Kp;
@@ -1115,6 +1118,7 @@ Velocity.Kp=5.8;
 Velocity.Ki=0.06;
 Velocity.Kd=0;
 }
+
 
 
 void I_amplitude_limiting(unsigned char number,unsigned char *Error_sum)
@@ -1147,4 +1151,43 @@ I_amplitude_limiting(20,&Velocity.error_sum);
 last_filt_velocity = filt_velocity;
 
 return ((int)(filt_velocity * Velocity.Kp + Velocity.error_sum * Velocity.Ki);
+}
+
+int Trace_PID()
+{
+float Kp=3.0;
+float Kd=1.0;
+
+static int turn_err;
+static int last_err;
+static int err_difference;
+
+Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+
+
+if( RE2==0 && RE1 == 0 )
+{
+turn_err=0;
+}
+else if(RE0 == 0 && RE1 == 0)
+{
+turn_err=-1;
+}
+else if(RE0 == 0 && RE1 == 1)
+{
+turn_err=-2;
+}
+else if(RA4 == 0 && RE2 == 0)
+{
+turn_err=1;
+}
+else if(RA4 == 0 && RE2 == 1)
+{
+turn_err=2;
+}
+
+err_difference= turn_err - last_err;
+last_err= turn_err;
+
+return (int)(turn_err*Kp + err_difference*Kd);
 }

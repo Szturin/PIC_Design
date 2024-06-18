@@ -1151,7 +1151,7 @@ case 0x07:return 16;
 }
 
 
-void RBIE_Init()
+void PIC_RBIE_Init()
 {
 TRISB=0xF0;
 nRBPU=0;

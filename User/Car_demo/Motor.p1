@@ -1789,7 +1789,107 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Motor.c: 54: {
 [e :U _Enconder_GetNum ]
 [f ]
-[; ;Motor.c: 56: }
-"56
+[; ;Motor.c: 57: }
+"57
 [e :UE 103 ]
+}
+"60
+[v _Motor_Speed_Set `(v  1 ef2`i`i ]
+{
+[; ;Motor.c: 59: void Motor_Speed_Set(int Speed1,int Speed2)
+[; ;Motor.c: 60: {
+[e :U _Motor_Speed_Set ]
+[v _Speed1 `i  1 r1 ]
+[v _Speed2 `i  1 r2 ]
+[f ]
+[; ;Motor.c: 61: if(Speed1 > 0 )
+"61
+[e $ ! > _Speed1 -> 0 `i 105  ]
+[; ;Motor.c: 62: {
+"62
+{
+[; ;Motor.c: 63: RB4 = 1;
+"63
+[e = _RB4 -> -> 1 `i `b ]
+[; ;Motor.c: 64: RB5 = 0;
+"64
+[e = _RB5 -> -> 0 `i `b ]
+[; ;Motor.c: 65: CCPR1L=(unsigned char)Speed1;
+"65
+[e = _CCPR1L -> _Speed1 `uc ]
+"66
+}
+[; ;Motor.c: 66: }
+[e $U 106  ]
+"67
+[e :U 105 ]
+[; ;Motor.c: 67: else
+[; ;Motor.c: 68: {
+"68
+{
+[; ;Motor.c: 69: RB4 = 0;
+"69
+[e = _RB4 -> -> 0 `i `b ]
+[; ;Motor.c: 70: RB5 = 1;
+"70
+[e = _RB5 -> -> 1 `i `b ]
+[; ;Motor.c: 71: CCPR1L=(unsigned char)(-Speed1);
+"71
+[e = _CCPR1L -> -U _Speed1 `uc ]
+"72
+}
+[e :U 106 ]
+[; ;Motor.c: 72: }
+[; ;Motor.c: 74: if(Speed2 >0 )
+"74
+[e $ ! > _Speed2 -> 0 `i 107  ]
+[; ;Motor.c: 75: {
+"75
+{
+[; ;Motor.c: 76: RB6 = 1;
+"76
+[e = _RB6 -> -> 1 `i `b ]
+[; ;Motor.c: 77: RB7 = 0;
+"77
+[e = _RB7 -> -> 0 `i `b ]
+[; ;Motor.c: 78: CCPR2L=(unsigned char)Speed2;
+"78
+[e = _CCPR2L -> _Speed2 `uc ]
+"79
+}
+[; ;Motor.c: 79: }
+[e $U 108  ]
+"80
+[e :U 107 ]
+[; ;Motor.c: 80: else
+[; ;Motor.c: 81: {
+"81
+{
+[; ;Motor.c: 82: RB6 = 0;
+"82
+[e = _RB6 -> -> 0 `i `b ]
+[; ;Motor.c: 83: RB7 = 1;
+"83
+[e = _RB7 -> -> 1 `i `b ]
+[; ;Motor.c: 84: CCPR2L=(unsigned char)(-Speed2);
+"84
+[e = _CCPR2L -> -U _Speed2 `uc ]
+"85
+}
+[e :U 108 ]
+[; ;Motor.c: 85: }
+[; ;Motor.c: 86: }
+"86
+[e :UE 104 ]
+}
+"88
+[v _Trace_Proc `(i  1 ef ]
+{
+[; ;Motor.c: 87: int Trace_Proc()
+[; ;Motor.c: 88: {
+[e :U _Trace_Proc ]
+[f ]
+[; ;Motor.c: 141: }
+"141
+[e :UE 109 ]
 }

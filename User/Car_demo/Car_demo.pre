@@ -1181,6 +1181,7 @@ unsigned char Trace_Write_Command();
 # 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H"
 void Motor_GPIO_Init();
 void Motor_CCP_PWM_Init();
+void Motor_Speed_Set(int Speed1,int Speed2);
 
 # 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Usart.H"
 void Serial_PrintString(unsigned char *String);
@@ -1193,6 +1194,11 @@ void Encoder_Init();
 # 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H"
 int Velocity_PID(int velocity,int velocity_calcu);
 void Velociy_PID_Init();
+int Trace_PID();
+
+# 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H"
+void csb_init();
+unsigned int csb();
 
 # 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Sys.H"
 void System_Init(void);
@@ -1226,70 +1232,24 @@ unsigned char Trace_Byte;
 
 unsigned char ack;
 
-int Trace_Proc()
-{
+unsigned char Speed_left,Speed_right;
 
-if(RE2==0 && RE1 == 0)
-{
-Motor_Flag=5;
-}
-else if(RE0 == 0)
-{
-
-Motor_Flag=3;
-}
-else if(RA4 == 0)
-{
-Motor_Flag=4;
-}
-}
-
-void Motor_Speed_Set(int Speed1,int Speed2)
-{
-if(Speed1 > 0 )
-{
-RB4 = 1;
-RB5 = 0;
-CCPR1L=(unsigned char)Speed1;
-}
-else
-{
-RB4 = 0;
-RB5 = 1;
-CCPR1L=(unsigned char)(-Speed1);
-}
-
-if(Speed2 >0 )
-{
-RB6 = 1;
-RB7 = 0;
-CCPR2L=(unsigned char)Speed2;
-}
-else
-{
-RB6 = 0;
-RB7 = 1;
-CCPR2L=(unsigned char)(-Speed2);
-}
-}
+unsigned char distance;
 
 
 void interrupt Service()
 {
-Trace_Proc();
-ack=Trace_Write_Command();
+Speed_left = 40 - Trace_PID();
+Speed_right = 40 + Trace_PID();
+Motor_Speed_Set(Speed_left,Speed_right);
 
-Trace_Byte = PORTA & 0B00111100;
-PORTD = Trace_Byte;
 if(RCIF==1)
 {
 bluetooth=RCREG;
-if(bluetooth == 'W'){Speed_Set=50;Turn=0;Motor_Flag=1;}
-if(bluetooth == 'Q'){Speed_Set=0;Turn=0;Motor_Flag=0;}
-if(bluetooth == 'S'){Speed_Set=-50;Turn=0;Motor_Flag=1;}
-if(bluetooth == 'A'){Turn=-20;Motor_Flag=2;}
-if(bluetooth == 'D'){Turn=20;Motor_Flag=2;}
-Motor_Speed_Set(PWM1,PWM2);
+
+if(bluetooth == '#'){}
+
+# 79
 RCIF=0;
 }
 else if(T0IF==1)
@@ -1304,29 +1264,6 @@ PWM = Velocity_PID(Speed,Speed_Set);
 
 PWM1 = PWM;
 PWM2 = PWM;
-
-if(Motor_Flag == 1)
-{
-Motor_Speed_Set(PWM1,PWM2);
-}
-
-# 141
-else if(Motor_Flag == 5)
-{
-Motor_Speed_Set(55,55);
-}
-else if(Motor_Flag == 3)
-{
-Motor_Speed_Set(60,40);
-}
-else if(Motor_Flag == 4)
-{
-Motor_Speed_Set(40,60);
-}
-else
-{
-Motor_Speed_Set(0,0);
-}
 }
 else if(INTF==1)
 {
@@ -1339,19 +1276,14 @@ INTF=0;
 
 void main()
 {
-TRISB1=0;
 
+TRISB1=0;
 TRISA0=0;
 TRISA1=0;
-
 TRISE0=1;
 TRISE1=1;
 TRISE2=1;
-
 TRISA4=1;
-
-
-
 
 LCD1602_GPIO_Init();
 LCD1602_Init();
@@ -1361,6 +1293,8 @@ LCD1602_WriteString(2,0,"Speed:");
 Usart_GPIO_Init();
 Usart_Init();
 Motor_GPIO_Init();
+csb_init();
+
 Motor_CCP_PWM_Init();
 
 Delay_ms(5000);
@@ -1368,11 +1302,14 @@ printf("串口初始化完成!\r\n");
 Motor_Speed_Set(PWM1,PWM2);
 Encoder_Init();
 Velociy_PID_Init();
+
+csb();
 while(1)
 {
 
-
-
+Speed_left = 40 - Trace_PID();
+Speed_right = 40 + Trace_PID();
+Motor_Speed_Set(Speed_left,Speed_right);
 LCD1602_WriteNum(2,7,Speed,3);
 LCD1602_WriteNum(1,7,RE0,1);
 LCD1602_WriteNum(1,8,RE1,1);

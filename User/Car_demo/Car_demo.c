@@ -2,7 +2,6 @@
 __CONFIG(0xFF29);//配置起始位
 #include <stdio.h>//C语言库
 
-
 /*PIC课程设计DEMO*/
 
 /*PIC单片机驱动相关子函数*/
@@ -15,6 +14,7 @@ __CONFIG(0xFF29);//配置起始位
 #include "..\..\Driver\Led.H"//Led
 #include "..\..\Driver\Encoder.H"//霍尔编码器测速
 #include "..\..\Driver\PID.H"//PID控制程序
+#include "..\..\Driver\csb.H"//超声波控制程序
 
 /*PIC单片机系统相关子函数*/
 #include "..\..\System\Sys.H"//系统初始化程序
@@ -49,70 +49,33 @@ unsigned char Trace_Byte;
 
 unsigned char ack;
 
-int Trace_Proc()
-{
-	//Trace_Byte = (RA4 << 5 | (PORTE & 0x07 << 2));
-	if(RE2==0 && RE1 == 0)
-	{
-		Motor_Flag=5;
-	}
-	else if(RE0 == 0)//右侧检测到黑线，右转
-	{
-		
-		Motor_Flag=3;
-	}
-	else if(RA4 == 0)//左边监测到黑线，左转
-	{
-		Motor_Flag=4;
-	}
-}
+unsigned char Speed_left,Speed_right;
 
-void Motor_Speed_Set(int Speed1,int Speed2)
-{
-	if(Speed1 > 0 )
-	{
-		Motor_LogicA_1 = 1;
-		Motor_LogicA_2 = 0;
-		CCPR1L=(unsigned char)Speed1;
-	}
-	else
-	{
-		Motor_LogicA_1 = 0;
-		Motor_LogicA_2 = 1;
-		CCPR1L=(unsigned char)(-Speed1);
-	}
-	
-	if(Speed2 >0 )
-	{
-		Motor_LogicB_1 = 1;
-		Motor_LogicB_2 = 0;
-		CCPR2L=(unsigned char)Speed2;
-	}
-	else
-	{
-		Motor_LogicB_1 = 0;
-		Motor_LogicB_2 = 1;
-		CCPR2L=(unsigned char)(-Speed2);		
-	}	
-}
+unsigned char distance;
 
 /*中断服务程序*/
 void interrupt Service()
 {	
-	Trace_Proc();
-	ack=Trace_Write_Command();
-	//PORTD = Trace_Read_Data();
-	Trace_Byte = PORTA & 0B00111100;//3-6路灰度
-	PORTD = Trace_Byte;
+	Speed_left = 40 - Trace_PID();
+	Speed_right = 40 + Trace_PID();
+	Motor_Speed_Set(Speed_left,Speed_right);
+		
 	if(RCIF==1)//串口接收中断
 	{
 		bluetooth=RCREG;
+		
+		if(bluetooth == '#'){}
+		
+		/*遥控测试程序*/
+		/*
 		if(bluetooth == 'W'){Speed_Set=50;Turn=0;Motor_Flag=1;}
 		if(bluetooth == 'Q'){Speed_Set=0;Turn=0;Motor_Flag=0;}
 		if(bluetooth == 'S'){Speed_Set=-50;Turn=0;Motor_Flag=1;}
 		if(bluetooth == 'A'){Turn=-20;Motor_Flag=2;}
-		if(bluetooth == 'D'){Turn=20;Motor_Flag=2;}
-		Motor_Speed_Set(PWM1,PWM2);
+		if(bluetooth == 'D'){Turn=20;Motor_Flag=2;}Motor_Speed_Set(PWM1,PWM2);
+		*/
+		
+		
 		RCIF=0;
 	}
 	else if(T0IF==1)//定时器0中断
@@ -127,33 +90,6 @@ void interrupt Service()
 		
 		PWM1 = PWM;
 		PWM2 = PWM;
-		
-		if(Motor_Flag == 1)
-		{
-			Motor_Speed_Set(PWM1,PWM2);
-		}
-		/*
-		else if(Motor_Flag == 2)
-		{
-			Motor_Speed_Set(Turn,-Turn);
-		}
-		*/
-		else if(Motor_Flag == 5)
-		{
-			Motor_Speed_Set(55,55);
-		} 
-		else if(Motor_Flag == 3)
-		{
-			Motor_Speed_Set(60,40);
-		}
-		else if(Motor_Flag == 4)
-		{
-			Motor_Speed_Set(40,60);
-		}
-		else
-		{	
-			Motor_Speed_Set(0,0);
-		}
 	}
 	else if(INTF==1)//外部中断
 	{
@@ -166,19 +102,14 @@ void interrupt Service()
 /*主函数*/
 void main()
 {
+	/*端口方向*/
 	TRISB1=0;
-	
 	TRISA0=0;
 	TRISA1=0;
-	
 	TRISE0=1;
 	TRISE1=1;
 	TRISE2=1;
-	
 	TRISA4=1;
-
-	
-
 	
 	LCD1602_GPIO_Init();//LCD1602引脚初始化
 	LCD1602_Init();//LCD1602初始化    
@@ -188,6 +119,8 @@ void main()
 	Usart_GPIO_Init();//串口GPIO初始化
 	Usart_Init();//串口初始化
 	Motor_GPIO_Init();//电机GPIO口初始化
+	csb_init();//超声波
+	
 	Motor_CCP_PWM_Init();//初始化CCP1、2为PWM输出模式
 	
 	Delay_ms(5000);//延时2s，等待单片机工作稳定，蓝牙成功配对
@@ -195,11 +128,14 @@ void main()
 	Motor_Speed_Set(PWM1,PWM2);
 	Encoder_Init();
 	Velociy_PID_Init();
+	
+	csb();
 	while(1)
 	{
 		/*LCD1602打印*/
-		//Speed_calculate();
-		//LCD1602_WriteNum(1,7,Trace_Byte,3);
+		Speed_left = 40 - Trace_PID();
+		Speed_right = 40 + Trace_PID();
+		Motor_Speed_Set(Speed_left,Speed_right);		
 		LCD1602_WriteNum(2,7,Speed,3);
 		LCD1602_WriteNum(1,7,RE0,1);
 		LCD1602_WriteNum(1,8,RE1,1);

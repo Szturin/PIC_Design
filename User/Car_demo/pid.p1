@@ -885,9 +885,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _filt_velocity `f  1 e ]
 "4 D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c
 [v _last_filt_velocity `f  1 e ]
+"15 D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c
+[v _Trace_Byte `uc  1 e ]
 [s S101 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S101 . Kp Ki Kd error last_error error_sum error_difference velocity_sum ]
-"18 D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c
+"29 D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c
 [v _Velocity `S101  1 e ]
 [; ;pic16f877a.h: 82: volatile unsigned char INDF @ 0x000;
 [; ;pic16f877a.h: 86: volatile unsigned char TMR0 @ 0x001;
@@ -1730,123 +1732,238 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `f
 ]
 [; ;pid.c: 4: float last_filt_velocity=0;
-[; ;pid.c: 6: typedef struct
-[; ;pid.c: 7: {
-[; ;pid.c: 8: float Kp;
-[; ;pid.c: 9: float Ki;
-[; ;pid.c: 10: float Kd;
-[; ;pid.c: 11: float error;
-[; ;pid.c: 12: float last_error;
-[; ;pid.c: 13: float error_sum;
-[; ;pid.c: 14: float error_difference;
-[; ;pid.c: 15: float velocity_sum;
-[; ;pid.c: 16: }PID;
-[; ;pid.c: 18: PID Velocity;
-"22
+[; ;pid.c: 15: unsigned char Trace_Byte;
+[; ;pid.c: 17: typedef struct
+[; ;pid.c: 18: {
+[; ;pid.c: 19: float Kp;
+[; ;pid.c: 20: float Ki;
+[; ;pid.c: 21: float Kd;
+[; ;pid.c: 22: float error;
+[; ;pid.c: 23: float last_error;
+[; ;pid.c: 24: float error_sum;
+[; ;pid.c: 25: float error_difference;
+[; ;pid.c: 26: float velocity_sum;
+[; ;pid.c: 27: }PID;
+[; ;pid.c: 29: PID Velocity;
+"33
 [v _Velociy_PID_Init `(v  1 ef ]
 {
-[; ;pid.c: 21: void Velociy_PID_Init()
-[; ;pid.c: 22: {
+[; ;pid.c: 32: void Velociy_PID_Init()
+[; ;pid.c: 33: {
 [e :U _Velociy_PID_Init ]
 [f ]
-[; ;pid.c: 23: Velocity.Kp=5.8;
-"23
+[; ;pid.c: 34: Velocity.Kp=5.8;
+"34
 [e = . _Velocity 0 -> .5.8 `f ]
-[; ;pid.c: 24: Velocity.Ki=0.06;
-"24
+[; ;pid.c: 35: Velocity.Ki=0.06;
+"35
 [e = . _Velocity 1 -> .0.06 `f ]
-[; ;pid.c: 25: Velocity.Kd=0;
-"25
+[; ;pid.c: 36: Velocity.Kd=0;
+"36
 [e = . _Velocity 2 -> -> 0 `i `f ]
-[; ;pid.c: 26: }
-"26
+[; ;pid.c: 37: }
+"37
 [e :UE 102 ]
 }
-"30
+"42
 [v _I_amplitude_limiting `(v  1 ef2`uc`*uc ]
 {
-[; ;pid.c: 29: void I_amplitude_limiting(unsigned char number,unsigned char *Error_sum)
-[; ;pid.c: 30: {
+[; ;pid.c: 41: void I_amplitude_limiting(unsigned char number,unsigned char *Error_sum)
+[; ;pid.c: 42: {
 [e :U _I_amplitude_limiting ]
 [v _number `uc  1 r1 ]
 [v _Error_sum `*uc  1 r2 ]
 [f ]
-[; ;pid.c: 31: if(*Error_sum > number)
-"31
+[; ;pid.c: 43: if(*Error_sum > number)
+"43
 [e $ ! > -> *U _Error_sum `i -> _number `i 104  ]
-[; ;pid.c: 32: {
-"32
+[; ;pid.c: 44: {
+"44
 {
-[; ;pid.c: 33: *Error_sum = number;
-"33
+[; ;pid.c: 45: *Error_sum = number;
+"45
 [e = *U _Error_sum _number ]
-"34
+"46
 }
 [e :U 104 ]
-[; ;pid.c: 34: }
-[; ;pid.c: 36: if(*Error_sum <- number)
-"36
+[; ;pid.c: 46: }
+[; ;pid.c: 48: if(*Error_sum <- number)
+"48
 [e $ ! < -> *U _Error_sum `i -U -> _number `i 105  ]
-[; ;pid.c: 37: {
-"37
+[; ;pid.c: 49: {
+"49
 {
-[; ;pid.c: 38: *Error_sum = -number;
-"38
+[; ;pid.c: 50: *Error_sum = -number;
+"50
 [e = *U _Error_sum -> -U -> _number `i `uc ]
-"39
+"51
 }
 [e :U 105 ]
-[; ;pid.c: 39: }
-[; ;pid.c: 40: }
-"40
+[; ;pid.c: 51: }
+[; ;pid.c: 52: }
+"52
 [e :UE 103 ]
 }
-"44
+"56
 [v _Velocity_PID `(i  1 ef2`i`i ]
 {
-[; ;pid.c: 43: int Velocity_PID(int velocity,int velocity_calcu)
-[; ;pid.c: 44: {
+[; ;pid.c: 55: int Velocity_PID(int velocity,int velocity_calcu)
+[; ;pid.c: 56: {
 [e :U _Velocity_PID ]
 [v _velocity `i  1 r1 ]
 [v _velocity_calcu `i  1 r2 ]
 [f ]
-"45
+"57
 [v _a `f  1 a ]
-[; ;pid.c: 45: float a = 0.3;
+[; ;pid.c: 57: float a = 0.3;
 [e = _a -> .0.3 `f ]
-[; ;pid.c: 47: if(velocity_calcu < 0)
-"47
+[; ;pid.c: 59: if(velocity_calcu < 0)
+"59
 [e $ ! < _velocity_calcu -> 0 `i 107  ]
-[; ;pid.c: 48: {
-"48
+[; ;pid.c: 60: {
+"60
 {
-[; ;pid.c: 49: velocity = -velocity;
-"49
+[; ;pid.c: 61: velocity = -velocity;
+"61
 [e = _velocity -U _velocity ]
-"50
+"62
 }
 [e :U 107 ]
-[; ;pid.c: 50: }
-[; ;pid.c: 52: Velocity.error = velocity - velocity_calcu;
-"52
+[; ;pid.c: 62: }
+[; ;pid.c: 64: Velocity.error = velocity - velocity_calcu;
+"64
 [e = . _Velocity 3 -> - _velocity _velocity_calcu `f ]
-[; ;pid.c: 53: filt_velocity = a*Velocity.error+(1-a)*last_filt_velocity;
-"53
+[; ;pid.c: 65: filt_velocity = a*Velocity.error+(1-a)*last_filt_velocity;
+"65
 [e = _filt_velocity + * _a . _Velocity 3 * - -> -> 1 `i `f _a _last_filt_velocity ]
-[; ;pid.c: 54: Velocity.error_sum += filt_velocity ;
-"54
+[; ;pid.c: 66: Velocity.error_sum += filt_velocity ;
+"66
 [e =+ . _Velocity 5 _filt_velocity ]
-[; ;pid.c: 55: I_amplitude_limiting(20,&Velocity.error_sum);
-"55
+[; ;pid.c: 67: I_amplitude_limiting(20,&Velocity.error_sum);
+"67
 [e ( _I_amplitude_limiting (2 , -> -> 20 `i `uc -> &U . _Velocity 5 `*uc ]
-[; ;pid.c: 56: last_filt_velocity = filt_velocity;
-"56
+[; ;pid.c: 68: last_filt_velocity = filt_velocity;
+"68
 [e = _last_filt_velocity _filt_velocity ]
-[; ;pid.c: 58: return ((int)(filt_velocity * Velocity.Kp + Velocity.error_sum * Velocity.Ki);
-"58
+[; ;pid.c: 70: return ((int)(filt_velocity * Velocity.Kp + Velocity.error_sum * Velocity.Ki);
+"70
 [e ) -> + * _filt_velocity . _Velocity 0 * . _Velocity 5 . _Velocity 1 `i ]
 [e $UE 106  ]
-[; ;pid.c: 59: }
-"59
+[; ;pid.c: 71: }
+"71
 [e :UE 106 ]
+}
+"74
+[v _Trace_PID `(i  1 ef ]
+{
+[; ;pid.c: 73: int Trace_PID()
+[; ;pid.c: 74: {
+[e :U _Trace_PID ]
+[f ]
+"75
+[v _Kp `f  1 a ]
+[; ;pid.c: 75: float Kp=3.0;
+[e = _Kp -> .3.0 `f ]
+"76
+[v _Kd `f  1 a ]
+[; ;pid.c: 76: float Kd=1.0;
+[e = _Kd -> .1.0 `f ]
+"78
+[v F1116 `i  1 s turn_err ]
+"79
+[v F1117 `i  1 s last_err ]
+"80
+[v F1118 `i  1 s err_difference ]
+[; ;pid.c: 78: static int turn_err;
+[; ;pid.c: 79: static int last_err;
+[; ;pid.c: 80: static int err_difference;
+[; ;pid.c: 82: Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+"82
+[e = _Trace_Byte -> | | | | | | | << -> _RC0 `i -> 7 `i << -> _RC3 `i -> 6 `i << -> _RE0 `i -> 5 `i << -> _RE1 `i -> 4 `i << -> _RE2 `i -> 3 `i << -> _RA4 `i -> 2 `i << -> _RC4 `i -> 1 `i -> _RC5 `i `uc ]
+[; ;pid.c: 85: if( RE2==0 && RE1 == 0 )
+"85
+[e $ ! && == -> _RE2 `i -> 0 `i == -> _RE1 `i -> 0 `i 109  ]
+[; ;pid.c: 86: {
+"86
+{
+[; ;pid.c: 87: turn_err=0;
+"87
+[e = F1116 -> 0 `i ]
+"88
+}
+[; ;pid.c: 88: }
+[e $U 110  ]
+"89
+[e :U 109 ]
+[; ;pid.c: 89: else if(RE0 == 0 && RE1 == 0)
+[e $ ! && == -> _RE0 `i -> 0 `i == -> _RE1 `i -> 0 `i 111  ]
+[; ;pid.c: 90: {
+"90
+{
+[; ;pid.c: 91: turn_err=-1;
+"91
+[e = F1116 -U -> 1 `i ]
+"92
+}
+[; ;pid.c: 92: }
+[e $U 112  ]
+"93
+[e :U 111 ]
+[; ;pid.c: 93: else if(RE0 == 0 && RE1 == 1)
+[e $ ! && == -> _RE0 `i -> 0 `i == -> _RE1 `i -> 1 `i 113  ]
+[; ;pid.c: 94: {
+"94
+{
+[; ;pid.c: 95: turn_err=-2;
+"95
+[e = F1116 -U -> 2 `i ]
+"96
+}
+[; ;pid.c: 96: }
+[e $U 114  ]
+"97
+[e :U 113 ]
+[; ;pid.c: 97: else if(RA4 == 0 && RE2 == 0)
+[e $ ! && == -> _RA4 `i -> 0 `i == -> _RE2 `i -> 0 `i 115  ]
+[; ;pid.c: 98: {
+"98
+{
+[; ;pid.c: 99: turn_err=1;
+"99
+[e = F1116 -> 1 `i ]
+"100
+}
+[; ;pid.c: 100: }
+[e $U 116  ]
+"101
+[e :U 115 ]
+[; ;pid.c: 101: else if(RA4 == 0 && RE2 == 1)
+[e $ ! && == -> _RA4 `i -> 0 `i == -> _RE2 `i -> 1 `i 117  ]
+[; ;pid.c: 102: {
+"102
+{
+[; ;pid.c: 103: turn_err=2;
+"103
+[e = F1116 -> 2 `i ]
+"104
+}
+[e :U 117 ]
+"106
+[e :U 116 ]
+[e :U 114 ]
+[e :U 112 ]
+[e :U 110 ]
+[; ;pid.c: 104: }
+[; ;pid.c: 106: err_difference= turn_err - last_err;
+[e = F1118 - F1116 F1117 ]
+[; ;pid.c: 107: last_err= turn_err;
+"107
+[e = F1117 F1116 ]
+[; ;pid.c: 109: return (int)(turn_err*Kp + err_difference*Kd);
+"109
+[e ) -> + * -> F1116 `f _Kp * -> F1118 `f _Kd `i ]
+[e $UE 108  ]
+[; ;pid.c: 110: }
+"110
+[e :UE 108 ]
 }

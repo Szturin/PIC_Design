@@ -1,11 +1,11 @@
 #include <pic.h>
 
-#define Motor_LogicA_1 RB0
-#define Motor_LogicA_2 RB1
-#define Motor_PWM_A	RC0
-#define Motor_LogicB_1 RB2
-#define Motor_LogicB_2 RB3
-#define Motor_PWM_B	RC1
+#define Motor_PWM_A RC2
+#define Motor_PWM_B RC1
+#define Motor_LogicA_1 RB4
+#define Motor_LogicA_2 RB5
+#define Motor_LogicB_1 RB6
+#define Motor_LogicB_2 RB7
 
 
 unsigned char Speed_measure1;
@@ -53,5 +53,89 @@ void Motor_CCP_PWM_Init()
 int Enconder_GetNum()
 {
 	
+	
 }
 
+void Motor_Speed_Set(int Speed1,int Speed2)
+{
+	if(Speed1 > 0 )
+	{
+		Motor_LogicA_1 = 1;
+		Motor_LogicA_2 = 0;
+		CCPR1L=(unsigned char)Speed1;
+	}
+	else
+	{
+		Motor_LogicA_1 = 0;
+		Motor_LogicA_2 = 1;
+		CCPR1L=(unsigned char)(-Speed1);
+	}
+	
+	if(Speed2 >0 )
+	{
+		Motor_LogicB_1 = 1;
+		Motor_LogicB_2 = 0;
+		CCPR2L=(unsigned char)Speed2;
+	}
+	else
+	{
+		Motor_LogicB_1 = 0;
+		Motor_LogicB_2 = 1;
+		CCPR2L=(unsigned char)(-Speed2);		
+	}	
+}
+int Trace_Proc()
+{
+	//Trace_Byte =(RA4 << 3 + RE2 <<2 + RE1<< 1 + RE0);
+	/*
+	int turn_err;
+	
+	if( RE2==0 && RE1 == 0 )//直行
+	{
+		turn_err=0;
+		//Speed_left = 20; Speed_right = 20;
+	}
+	else if(RE0 == 0 && RE1 == 0)//右小转
+	{
+		turn_err=-1;
+		//Speed_left = 25; Speed_right = 20;
+	}
+	else if(RE0 == 0 && RE1 == 1)//右侧检测到黑线，右转
+	{
+		turn_err=-2;
+		//Speed_left = 40; Speed_right = 20;
+	}
+	else if(RA4 == 0 && RE2 == 0)//左小转
+	{
+		turn_err=1;
+		//Speed_left = 20; Speed_right = 25;
+	}
+	else if(RA4 == 0 && RE2 == 1)//左边监测到黑线，左转
+	{
+		turn_err=2;
+		//Speed_left = 20; Speed_right = 40;
+	}
+	return turn_err;
+	*/
+	/*
+	switch(Trace_Byte)
+	{
+		case 0B00101100://左转
+			Speed_left = 20; Speed_right = 25;		
+				   break;
+		case 0B00001100://左小转
+			Speed_left = 20; Speed_right = 40;		
+				   break;
+		case 0B00110100://右转
+			Speed_left = 40; Speed_right = 20;		
+				   break;
+		case 0B00110000://右小转
+			Speed_left = 25; Speed_right = 20;		
+				   break;
+		default:
+			 Speed_left = 20; Speed_right = 20;
+				   break;
+	}
+	*/
+	
+}

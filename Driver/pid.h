@@ -3,4 +3,5 @@
 
 int Velocity_PID(int velocity,int velocity_calcu);
 void Velociy_PID_Init();
+int Trace_PID();
 #endif

@@ -881,76 +881,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EECON1bits `VS99  1 e@396 ]
 "1167 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f877a.h
 [v _EECON2 `Vuc  1 e@397 ]
-"32 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _bluetooth `uc  1 e ]
-"34 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _PWM1 `i  1 e ]
-"34 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _PWM2 `i  1 e ]
-"35 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _PWM `i  1 e ]
-"38 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Counter_temp `ui  1 e ]
-"39 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Timer0_Counter `ui  1 e ]
-"40 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _m `uc  1 e ]
-"41 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Encoder_Counter `uc  1 e ]
-"43 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Motor_Flag `uc  1 e ]
-"44 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Speed `i  1 e ]
-"45 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Speed_Set `i  1 e ]
-"46 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Turn `i  1 e ]
-"48 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Trace_Byte `uc  1 e ]
-"50 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _ack `uc  1 e ]
-"52 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Speed_left `uc  1 e ]
-"52 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Speed_right `uc  1 e ]
-"54 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _distance `uc  1 e ]
-"6 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Trace_PID `(i  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
-[v _Motor_Speed_Set `(v  0 ef2`i`i ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Velocity_PID `(i  0 ef2`i`i ]
-[p mainexit ]
-"11 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
-[v _LCD1602_GPIO_Init `(v  0 ef ]
-"6 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
-[v _LCD1602_Init `(v  0 ef ]
-"8 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
-[v _LCD1602_WriteString `(v  0 ef3`uc`uc`*uc ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Usart.H
-[v _Usart_GPIO_Init `(v  0 ef ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Usart.H
-[v _Usart_Init `(v  0 ef ]
-"3 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
-[v _Motor_GPIO_Init `(v  0 ef ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H
-[v _csb_init `(v  0 ef ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
-[v _Motor_CCP_PWM_Init `(v  0 ef ]
-"3 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Delay.H
-[v _Delay_ms `(v  0 ef1`ui ]
-"207 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdio.h
-[v _printf `(i  0 ev`*Cuc ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Encoder.H
-[v _Encoder_Init `(v  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Velociy_PID_Init `(v  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H
-[v _csb `(ui  0 ef ]
-"10 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
-[v _LCD1602_WriteNum `(v  0 ef4`uc`uc`ui`uc ]
-[p f _printf 8388736 ]
+"8 D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c
+[v _dis `ui  1 e ]
+"9 D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c
+[v _table `Vuc  -> 16 `i s ]
+"28 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic.h
+[v __nop `(v  0 ef ]
+[p i __nop ]
 [; ;pic16f877a.h: 82: volatile unsigned char INDF @ 0x000;
 [; ;pic16f877a.h: 86: volatile unsigned char TMR0 @ 0x001;
 [; ;pic16f877a.h: 90: volatile unsigned char PCL @ 0x002;
@@ -1782,309 +1719,212 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 43: extern void eecpymem(volatile unsigned char *to, eeprom unsigned char *from, unsigned char size);
 [; ;eeprom_routines.h: 44: extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 [; ;pic.h: 154: extern void _delay(unsigned long);
-"2 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[; ;Car_demo.c: 2: asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFF29");
-[; 	psect config,class=CONFIG,delta=2 ;#
-[; 	dw 0xFF29 ;#
-[; ;stdio.h: 12: typedef int ptrdiff_t;
-[; ;stdio.h: 13: typedef unsigned size_t;
-[; ;stdio.h: 14: typedef unsigned short wchar_t;
-[; ;stdarg.h: 31: typedef void * va_list[1];
-[; ;stdarg.h: 34: extern void * __va_start(void);
-[; ;stdarg.h: 37: extern void * __va_arg(void *, ...);
-[; ;stdio.h: 27: extern int errno;
-[; ;stdio.h: 58: struct __prbuf
-[; ;stdio.h: 59: {
-[; ;stdio.h: 60: char * ptr;
-[; ;stdio.h: 61: void (* func)(char);
-[; ;stdio.h: 62: };
-[; ;conio.h: 17: extern int errno;
-[; ;conio.h: 20: extern void init_uart(void);
-[; ;conio.h: 22: extern char getch(void);
-[; ;conio.h: 23: extern char getche(void);
-[; ;conio.h: 24: extern void putch(char);
-[; ;conio.h: 25: extern void ungetch(char);
-[; ;conio.h: 27: extern bit kbhit(void);
-[; ;conio.h: 31: extern char * cgets(char *);
-[; ;conio.h: 32: extern void cputs(const char *);
-[; ;stdio.h: 103: extern int cprintf(char *, ...);
-[; ;stdio.h: 108: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-[; ;stdio.h: 195: extern char * gets(char *);
-[; ;stdio.h: 196: extern int puts(const char *);
-[; ;stdio.h: 197: extern int scanf(const char *, ...);
-[; ;stdio.h: 198: extern int sscanf(const char *, const char *, ...);
-[; ;stdio.h: 199: extern int vprintf(const char *, va_list);
-[; ;stdio.h: 200: extern int vsprintf(char *, const char *, va_list);
-[; ;stdio.h: 201: extern int vscanf(const char *, va_list ap);
-[; ;stdio.h: 202: extern int vsscanf(const char *, const char *, va_list);
-[; ;stdio.h: 206: extern int sprintf(char *, const char *, ...);
-[; ;stdio.h: 207: extern int printf(const char *, ...);
-[; ;LCD1602.H: 3: void LCD1602_Delay();
-[; ;LCD1602.H: 4: void LCD1602_WriteCommand(unsigned char Command);
-[; ;LCD1602.H: 5: void LCD1602_WriteData(unsigned char Data);
-[; ;LCD1602.H: 6: void LCD1602_Init(void);
-[; ;LCD1602.H: 7: void LCD1602_WriteChar(unsigned char row,unsigned char column,unsigned char ch);
-[; ;LCD1602.H: 8: void LCD1602_WriteString(unsigned char row,unsigned char column,unsigned char *String);
-[; ;LCD1602.H: 9: int LCD1602_Pow(unsigned char X,unsigned char Y);
-[; ;LCD1602.H: 10: void LCD1602_WriteNum(unsigned char row,unsigned char column,unsigned int number,unsigned char lenth);
-[; ;LCD1602.H: 11: void LCD1602_GPIO_Init();
-[; ;KeyBoard.H: 4: unsigned char Test_Key_Read_Matrix();
-[; ;KeyBoard.H: 5: unsigned char RBIE_Key_Proc();
-[; ;iic.H: 3: unsigned char IIC_ReadReg_Byte(unsigned char MachineAddr,unsigned char RegAddr);
-[; ;iic.H: 4: void IIC_WriteReg_Byte(unsigned char MachineAddr,unsigned char RegAddr,unsigned char Data);
-[; ;iic.H: 5: unsigned char Trace_Read_Data();
-[; ;iic.H: 6: unsigned char Trace_Write_Command();
-[; ;Motor.H: 3: void Motor_GPIO_Init();
-[; ;Motor.H: 4: void Motor_CCP_PWM_Init();
-[; ;Motor.H: 5: void Motor_Speed_Set(int Speed1,int Speed2);
-[; ;Usart.H: 3: void Serial_PrintString(unsigned char *String);
-[; ;Usart.H: 4: void Usart_Init(void);
-[; ;Usart.H: 5: void Usart_GPIO_Init(void);
-[; ;Encoder.H: 4: void Encoder_Init();
-[; ;PID.H: 4: int Velocity_PID(int velocity,int velocity_calcu);
-[; ;PID.H: 5: void Velociy_PID_Init();
-[; ;PID.H: 6: int Trace_PID();
-[; ;csb.H: 4: void csb_init();
-[; ;csb.H: 5: unsigned int csb();
-[; ;Sys.H: 3: void System_Init(void);
-[; ;Timer.H: 3: void TIM0_Init();
-[; ;Timer.H: 4: void TIM1_Init();
-[; ;Timer.H: 5: void TIM2_Init();
-[; ;Delay.H: 3: void Delay_ms(unsigned int x);
-[; ;Car_demo.c: 32: unsigned char bluetooth;
-"34
-[i _PWM1
--> 0 `i
+[; ;csb.h: 4: void csb_init();
+[; ;csb.h: 5: unsigned int csb();
+[; ;LCD1602.h: 3: void LCD1602_Delay();
+[; ;LCD1602.h: 4: void LCD1602_WriteCommand(unsigned char Command);
+[; ;LCD1602.h: 5: void LCD1602_WriteData(unsigned char Data);
+[; ;LCD1602.h: 6: void LCD1602_Init(void);
+[; ;LCD1602.h: 7: void LCD1602_WriteChar(unsigned char row,unsigned char column,unsigned char ch);
+[; ;LCD1602.h: 8: void LCD1602_WriteString(unsigned char row,unsigned char column,unsigned char *String);
+[; ;LCD1602.h: 9: int LCD1602_Pow(unsigned char X,unsigned char Y);
+[; ;LCD1602.h: 10: void LCD1602_WriteNum(unsigned char row,unsigned char column,unsigned int number,unsigned char lenth);
+[; ;LCD1602.h: 11: void LCD1602_GPIO_Init();
+[; ;csb.c: 8: unsigned int dis;
+"9 D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c
+[i _table
+:U ..
+-> -> 48 `i `uc
+-> -> 49 `i `uc
+-> -> 50 `i `uc
+-> -> 51 `i `uc
+-> -> 52 `i `uc
+-> -> 53 `i `uc
+"10
+-> -> 54 `i `uc
+-> -> 55 `i `uc
+-> -> 56 `i `uc
+-> -> 57 `i `uc
+-> -> 65 `i `uc
+-> -> 66 `i `uc
+-> -> 67 `i `uc
+-> -> 68 `i `uc
+-> -> 69 `i `uc
+-> -> 70 `i `uc
+..
 ]
-[i _PWM2
--> 0 `i
-]
-[; ;Car_demo.c: 34: int PWM1=0,PWM2=0;
-[; ;Car_demo.c: 35: int PWM;
-[; ;Car_demo.c: 38: unsigned int Counter_temp;
-[; ;Car_demo.c: 39: unsigned int Timer0_Counter;
-[; ;Car_demo.c: 40: unsigned char m;
-[; ;Car_demo.c: 41: unsigned char Encoder_Counter;
-[; ;Car_demo.c: 43: unsigned char Motor_Flag;
-[; ;Car_demo.c: 44: int Speed;
-[; ;Car_demo.c: 45: int Speed_Set;
-[; ;Car_demo.c: 46: int Turn;
-[; ;Car_demo.c: 48: unsigned char Trace_Byte;
-[; ;Car_demo.c: 50: unsigned char ack;
-[; ;Car_demo.c: 52: unsigned char Speed_left,Speed_right;
-[; ;Car_demo.c: 54: unsigned char distance;
-"58
-[v F1233 `(v  1 tf ]
-[v _Service `IF1233  1 e ]
+[; ;csb.c: 9: static volatile char table[16]={0x30,0x31,0x32,0x33,0x34,0x35,
+[; ;csb.c: 10: 0x36,0x37,0x38,0x39,0x41,0x42,0x43,0x44,0x45,0x46};
+"13
+[v _Delay12us `(v  1 ef ]
 {
-[; ;Car_demo.c: 57: void interrupt Service()
-[; ;Car_demo.c: 58: {
-[e :U _Service ]
+[; ;csb.c: 12: void Delay12us()
+[; ;csb.c: 13: {
+[e :U _Delay12us ]
 [f ]
-[; ;Car_demo.c: 59: Speed_left = 40 - Trace_PID();
-"59
-[e = _Speed_left -> - -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 60: Speed_right = 40 + Trace_PID();
-"60
-[e = _Speed_right -> + -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 61: Motor_Speed_Set(Speed_left,Speed_right);
-"61
-[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
-[; ;Car_demo.c: 63: if(RCIF==1)
-"63
-[e $ ! == -> _RCIF `i -> 1 `i 103  ]
-[; ;Car_demo.c: 64: {
-"64
-{
-[; ;Car_demo.c: 65: bluetooth=RCREG;
-"65
-[e = _bluetooth _RCREG ]
-[; ;Car_demo.c: 67: if(bluetooth == '#'){}
-"67
-[e $ ! == -> _bluetooth `ui -> 35 `ui 104  ]
-{
-}
-[e :U 104 ]
-[; ;Car_demo.c: 79: RCIF=0;
-"79
-[e = _RCIF -> -> 0 `i `b ]
-"80
-}
-[; ;Car_demo.c: 80: }
-[e $U 105  ]
-"81
+"14
+[v _i `uc  1 a ]
+[; ;csb.c: 14: unsigned char i;
+[; ;csb.c: 15: _nop();
+"15
+[e ( __nop ..  ]
+[; ;csb.c: 16: _nop();
+"16
+[e ( __nop ..  ]
+[; ;csb.c: 17: i=20;
+"17
+[e = _i -> -> 20 `i `uc ]
+[; ;csb.c: 18: while(i--);
+"18
+[e $U 102  ]
 [e :U 103 ]
-[; ;Car_demo.c: 81: else if(T0IF==1)
-[e $ ! == -> _T0IF `i -> 1 `i 106  ]
-[; ;Car_demo.c: 82: {
-"82
-{
-[; ;Car_demo.c: 83: TMR0=60;
-"83
-[e = _TMR0 -> -> 60 `i `uc ]
-[; ;Car_demo.c: 84: T0IF=0;
-"84
-[e = _T0IF -> -> 0 `i `b ]
-[; ;Car_demo.c: 86: Speed = Encoder_Counter;
-"86
-[e = _Speed -> _Encoder_Counter `i ]
-[; ;Car_demo.c: 87: Encoder_Counter=0;
-"87
-[e = _Encoder_Counter -> -> 0 `i `uc ]
-[; ;Car_demo.c: 89: PWM = Velocity_PID(Speed,Speed_Set);
-"89
-[e = _PWM ( _Velocity_PID (2 , _Speed _Speed_Set ]
-[; ;Car_demo.c: 91: PWM1 = PWM;
-"91
-[e = _PWM1 _PWM ]
-[; ;Car_demo.c: 92: PWM2 = PWM;
-"92
-[e = _PWM2 _PWM ]
-"93
+[e :U 102 ]
+[e $ != -> -- _i -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 103  ]
+[e :U 104 ]
+[; ;csb.c: 19: }
+"19
+[e :UE 101 ]
 }
-[; ;Car_demo.c: 93: }
-[e $U 107  ]
-"94
-[e :U 106 ]
-[; ;Car_demo.c: 94: else if(INTF==1)
-[e $ ! == -> _INTF `i -> 1 `i 108  ]
-[; ;Car_demo.c: 95: {
-"95
+"22
+[v _csb_init `(v  1 ef ]
 {
-[; ;Car_demo.c: 96: Encoder_Counter++;
-"96
-[e ++ _Encoder_Counter -> -> 1 `i `uc ]
-[; ;Car_demo.c: 97: INTF=0;
-"97
-[e = _INTF -> -> 0 `i `b ]
-"98
-}
-[e :U 108 ]
-"99
-[e :U 107 ]
-[e :U 105 ]
-[; ;Car_demo.c: 98: }
-[; ;Car_demo.c: 99: }
-[e :UE 102 ]
-}
-"104
-[v _main `(v  1 ef ]
-{
-[; ;Car_demo.c: 103: void main()
-[; ;Car_demo.c: 104: {
-[e :U _main ]
+[; ;csb.c: 21: void csb_init()
+[; ;csb.c: 22: {
+[e :U _csb_init ]
 [f ]
-[; ;Car_demo.c: 106: TRISB1=0;
-"106
-[e = _TRISB1 -> -> 0 `i `b ]
-[; ;Car_demo.c: 107: TRISA0=0;
-"107
-[e = _TRISA0 -> -> 0 `i `b ]
-[; ;Car_demo.c: 108: TRISA1=0;
-"108
-[e = _TRISA1 -> -> 0 `i `b ]
-[; ;Car_demo.c: 109: TRISE0=1;
-"109
-[e = _TRISE0 -> -> 1 `i `b ]
-[; ;Car_demo.c: 110: TRISE1=1;
-"110
-[e = _TRISE1 -> -> 1 `i `b ]
-[; ;Car_demo.c: 111: TRISE2=1;
-"111
+[; ;csb.c: 23: GIE=1;PEIE=1;TMR1IE=1;TMR1IF=0;
+"23
+[e = _GIE -> -> 1 `i `b ]
+[e = _PEIE -> -> 1 `i `b ]
+[e = _TMR1IE -> -> 1 `i `b ]
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;csb.c: 25: TRISE1=0;TRISE2=1;
+"25
+[e = _TRISE1 -> -> 0 `i `b ]
 [e = _TRISE2 -> -> 1 `i `b ]
-[; ;Car_demo.c: 112: TRISA4=1;
-"112
-[e = _TRISA4 -> -> 1 `i `b ]
-[; ;Car_demo.c: 114: LCD1602_GPIO_Init();
-"114
-[e ( _LCD1602_GPIO_Init ..  ]
-[; ;Car_demo.c: 115: LCD1602_Init();
-"115
-[e ( _LCD1602_Init ..  ]
-[; ;Car_demo.c: 116: LCD1602_WriteString(1,0,"CAR 1");
-"116
-[e ( _LCD1602_WriteString (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> :s 1C `*uc ]
-[; ;Car_demo.c: 117: LCD1602_WriteString(2,0,"Speed:");
-"117
-[e ( _LCD1602_WriteString (3 , , -> -> 2 `i `uc -> -> 0 `i `uc -> :s 2C `*uc ]
-[; ;Car_demo.c: 119: Usart_GPIO_Init();
-"119
-[e ( _Usart_GPIO_Init ..  ]
-[; ;Car_demo.c: 120: Usart_Init();
-"120
-[e ( _Usart_Init ..  ]
-[; ;Car_demo.c: 121: Motor_GPIO_Init();
-"121
-[e ( _Motor_GPIO_Init ..  ]
-[; ;Car_demo.c: 122: csb_init();
-"122
-[e ( _csb_init ..  ]
-[; ;Car_demo.c: 124: Motor_CCP_PWM_Init();
-"124
-[e ( _Motor_CCP_PWM_Init ..  ]
-[; ;Car_demo.c: 126: Delay_ms(5000);
-"126
-[e ( _Delay_ms (1 -> -> 5000 `i `ui ]
-[; ;Car_demo.c: 127: printf("串口初始化完成!\r\n");
-"127
-[e ( _printf :s 3C ]
-[; ;Car_demo.c: 128: Motor_Speed_Set(PWM1,PWM2);
-"128
-[e ( _Motor_Speed_Set (2 , _PWM1 _PWM2 ]
-[; ;Car_demo.c: 129: Encoder_Init();
-"129
-[e ( _Encoder_Init ..  ]
-[; ;Car_demo.c: 130: Velociy_PID_Init();
-"130
-[e ( _Velociy_PID_Init ..  ]
-[; ;Car_demo.c: 132: csb();
-"132
-[e ( _csb ..  ]
-[; ;Car_demo.c: 133: while(1)
-"133
-[e :U 111 ]
-[; ;Car_demo.c: 134: {
-"134
+[; ;csb.c: 26: ADCON1=7;TRISA=0;TRISD=0;
+"26
+[e = _ADCON1 -> -> 7 `i `uc ]
+[e = _TRISA -> -> 0 `i `uc ]
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;csb.c: 28: RA0 = 0;
+"28
+[e = _RA0 -> -> 0 `i `b ]
+[; ;csb.c: 29: RA1 = 1;
+"29
+[e = _RA1 -> -> 1 `i `b ]
+[; ;csb.c: 31: T1CON=0B00000000;
+"31
+[e = _T1CON -> -> 0 `i `uc ]
+[; ;csb.c: 32: TMR1H=0x00;
+"32
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;csb.c: 33: TMR1L=0x00;
+"33
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;csb.c: 34: TMR1ON=0x00;
+"34
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 35: }
+"35
+[e :UE 105 ]
+}
+"38
+[v _csb `(ui  1 ef ]
 {
-[; ;Car_demo.c: 136: Speed_left = 40 - Trace_PID();
-"136
-[e = _Speed_left -> - -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 137: Speed_right = 40 + Trace_PID();
-"137
-[e = _Speed_right -> + -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 138: Motor_Speed_Set(Speed_left,Speed_right);
-"138
-[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
-[; ;Car_demo.c: 139: LCD1602_WriteNum(2,7,Speed,3);
-"139
-[e ( _LCD1602_WriteNum (4 , , , -> -> 2 `i `uc -> -> 7 `i `uc -> _Speed `ui -> -> 3 `i `uc ]
-[; ;Car_demo.c: 140: LCD1602_WriteNum(1,7,RE0,1);
-"140
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 7 `i `uc -> -> _RE0 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 141: LCD1602_WriteNum(1,8,RE1,1);
-"141
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 8 `i `uc -> -> _RE1 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 142: LCD1602_WriteNum(1,9,RE2,1);
-"142
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 9 `i `uc -> -> _RE2 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 143: LCD1602_WriteNum(1,10,RA4,1);
-"143
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 10 `i `uc -> -> _RA4 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 144: printf("Speed:%d\r\n",(unsigned int)Speed);
-"144
-[e ( _printf , (. :s 4C -> _Speed `ui ]
-"145
-}
+[; ;csb.c: 37: unsigned int csb()
+[; ;csb.c: 38: {
+[e :U _csb ]
+[f ]
+"39
+[v _time `ui  1 a ]
+"40
+[v _ah `uc  1 a ]
+[v _al `uc  1 a ]
+[; ;csb.c: 39: unsigned int time;
+[; ;csb.c: 40: unsigned char ah,al;
+[; ;csb.c: 41: dis = 0;
+"41
+[e = _dis -> -> 0 `i `ui ]
+[; ;csb.c: 42: TMR1ON = 0;
+"42
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 43: TMR1H = 0x00;
+"43
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;csb.c: 44: TMR1L = 0x00;
+"44
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;csb.c: 46: RA0 = 1;
+"46
+[e = _RA0 -> -> 1 `i `b ]
+[; ;csb.c: 47: Delay12us();
+"47
+[e ( _Delay12us ..  ]
+[; ;csb.c: 48: RA0 = 0;
+"48
+[e = _RA0 -> -> 0 `i `b ]
+[; ;csb.c: 50: while(!RA1);
+"50
+[e $U 107  ]
+[e :U 108 ]
+[e :U 107 ]
+[e $ ! _RA1 108  ]
+[e :U 109 ]
+[; ;csb.c: 51: TMR1ON=1;
+"51
+[e = _TMR1ON -> -> 1 `i `b ]
+[; ;csb.c: 52: while(RA1 == 1 && TMR1IF == 0);
+"52
+[e $U 110  ]
+[e :U 111 ]
 [e :U 110 ]
-"133
-[e $U 111  ]
+[e $ && == -> _RA1 `i -> 1 `i == -> _TMR1IF `i -> 0 `i 111  ]
 [e :U 112 ]
-[; ;Car_demo.c: 145: }
-[; ;Car_demo.c: 146: }
-"146
-[e :UE 109 ]
+[; ;csb.c: 53: ah = TMR1H;
+"53
+[e = _ah _TMR1H ]
+[; ;csb.c: 54: al = TMR1L;
+"54
+[e = _al _TMR1L ]
+[; ;csb.c: 55: TMR1ON=0;
+"55
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 56: if(TMR1IF == 0)
+"56
+[e $ ! == -> _TMR1IF `i -> 0 `i 113  ]
+[; ;csb.c: 57: {
+"57
+{
+[; ;csb.c: 58: time = ah<<8|al;
+"58
+[e = _time -> | << -> _ah `i -> 8 `i -> _al `i `ui ]
+[; ;csb.c: 59: return (time*0.01723);
+"59
+[e ) -> * -> _time `d .0.01723 `ui ]
+[e $UE 106  ]
+"60
 }
-[a 2C 83 112 101 101 100 58 0 ]
-[a 1C 67 65 82 32 49 0 ]
-[a 4C 83 112 101 101 100 58 37 100 13 10 0 ]
-[a 3C 180 174 191 218 179 245 202 188 187 175 205 234 179 201 33 13 10 0 ]
+[; ;csb.c: 60: }
+[e $U 114  ]
+"61
+[e :U 113 ]
+[; ;csb.c: 61: else
+[; ;csb.c: 62: {
+"62
+{
+[; ;csb.c: 63: TMR1IF = 0;
+"63
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;csb.c: 64: return 0;
+"64
+[e ) -> -> 0 `i `ui ]
+[e $UE 106  ]
+"65
+}
+[e :U 114 ]
+[; ;csb.c: 65: }
+[; ;csb.c: 66: }
+"66
+[e :UE 106 ]
+}

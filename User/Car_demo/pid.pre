@@ -1099,6 +1099,18 @@ static int turn_err;
 static int last_err;
 static int err_difference;
 
+void Trace_GPIO_Init()
+{
+TRISE0=1;
+TRISE1=1;
+TRISE2=1;
+TRISA4=1;
+TRISC0=1;
+TRISC3=1;
+TRISC4=1;
+TRISC5=1;
+}
+
 int Trace_PID()
 {
 Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);

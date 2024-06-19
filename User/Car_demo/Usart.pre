@@ -1154,7 +1154,18 @@ extern int vsscanf(const char *, const char *, va_list);
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 12 "D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c"
+# 3 "D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c"
+unsigned char recv_data;
+
+enum USART_DATA_TYPE
+{
+CAR_CHANGE_STA = 1,
+CAR_SPEED_UP,
+CAR_SPEED_MID,
+CAR_SPEED_DOWN
+};
+
+# 21
 void putch(unsigned char ch)
 {
 TXREG=ch;
@@ -1176,7 +1187,7 @@ TRISC6=1;
 TRISC7=1;
 }
 
-# 38
+# 47
 void Usart_Init(void)
 {
 TXSTA=0B00100100;
@@ -1185,5 +1196,26 @@ SPBRG=12;
 GIE=1;
 PEIE=1;
 RCIE=1;
+}
+
+void usart_Interrupt(void)
+{
+if (RCIE && RCIF)
+{
+recv_data = RCREG;
+RCIF = 0;
+}
+}
+
+unsigned char usart_GetData(void)
+{
+if (!recv_data)
+{
+return 0;
+}
+
+unsigned char temp = recv_data;
+recv_data = 0;
+return temp;
 }
 

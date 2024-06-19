@@ -9,7 +9,7 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
@@ -22,7 +22,7 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
@@ -35,7 +35,7 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
@@ -48,7 +48,7 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
@@ -61,25 +61,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
 [File005]
-Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\spi.p1
-Folder=Intermediary
-DeviceName=PIC16F877A
-LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
-LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
-LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
-PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
-SuiteArgsString=
-ToolArgsString=C9=2,1
-TraceCmdString=
-DebugOptions=
-[File006]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Usart.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -87,12 +74,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File007]
+[File006]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Delay.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -100,12 +87,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File008]
+[File007]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Timer.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -113,25 +100,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File009]
-Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Sys.p1
-Folder=Intermediary
-DeviceName=PIC16F877A
-LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
-LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
-LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
-PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
-SuiteArgsString=
-ToolArgsString=C9=2,1
-TraceCmdString=
-DebugOptions=
-[File010]
+[File008]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Encoder.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -139,12 +113,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File011]
+[File009]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\pid.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -152,12 +126,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File012]
+[File010]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\csb.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -165,12 +139,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File013]
+[File011]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.p1
 Folder=Intermediary
 DeviceName=PIC16F877A
@@ -178,12 +152,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File014]
+[File012]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.cof
 Folder=Output
 DeviceName=PIC16F877A
@@ -191,12 +165,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File015]
+[File013]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.hex
 Folder=Output
 DeviceName=PIC16F877A
@@ -204,12 +178,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File016]
+[File014]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.sym
 Folder=Output
 DeviceName=PIC16F877A
@@ -217,12 +191,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File017]
+[File015]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.map
 Folder=Output
 DeviceName=PIC16F877A
@@ -230,12 +204,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File018]
+[File016]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.hxl
 Folder=Output
 DeviceName=PIC16F877A
@@ -243,12 +217,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File019]
+[File017]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\startup.lst
 Folder=Output
 DeviceName=PIC16F877A
@@ -256,12 +230,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File020]
+[File018]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\startup.rlf
 Folder=Output
 DeviceName=PIC16F877A
@@ -269,12 +243,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File021]
+[File019]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\doprnt.p1
 Folder=Output
 DeviceName=PIC16F877A
@@ -282,12 +256,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File022]
+[File020]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\doprnt.pre
 Folder=Output
 DeviceName=PIC16F877A
@@ -295,12 +269,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File023]
+[File021]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.obj
 Folder=Output
 DeviceName=PIC16F877A
@@ -308,12 +282,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File024]
+[File022]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.lst
 Folder=Output
 DeviceName=PIC16F877A
@@ -321,12 +295,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File025]
+[File023]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.rlf
 Folder=Output
 DeviceName=PIC16F877A
@@ -334,12 +308,12 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=
 DebugOptions=
-[File026]
+[File024]
 Location=D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\202121365038.sdb
 Folder=Output
 DeviceName=PIC16F877A
@@ -347,7 +321,7 @@ LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
 LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
 LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
-SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\spi.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\System\Sys.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
+SOLK=<src>|D:\6_pic_project\00_Design_Flow_Car\Driver\LCD1602.c|D:\6_pic_project\00_Design_Flow_Car\Driver\KeyBoard.c|D:\6_pic_project\00_Design_Flow_Car\Driver\iic.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Led.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Usart.c|D:\6_pic_project\00_Design_Flow_Car\System\Delay.c|D:\6_pic_project\00_Design_Flow_Car\System\Timer.c|D:\6_pic_project\00_Design_Flow_Car\Driver\Encoder.c|D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c|D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c|Car_demo.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
 ToolArgsString=C9=2,1
 TraceCmdString=

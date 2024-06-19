@@ -1739,191 +1739,226 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pid.c: 17: static int last_err;
 [; ;pid.c: 18: static int err_difference;
 "21
+[v _Trace_GPIO_Init `(v  1 ef ]
+{
+[; ;pid.c: 20: void Trace_GPIO_Init()
+[; ;pid.c: 21: {
+[e :U _Trace_GPIO_Init ]
+[f ]
+[; ;pid.c: 22: TRISE0=1;
+"22
+[e = _TRISE0 -> -> 1 `i `b ]
+[; ;pid.c: 23: TRISE1=1;
+"23
+[e = _TRISE1 -> -> 1 `i `b ]
+[; ;pid.c: 24: TRISE2=1;
+"24
+[e = _TRISE2 -> -> 1 `i `b ]
+[; ;pid.c: 25: TRISA4=1;
+"25
+[e = _TRISA4 -> -> 1 `i `b ]
+[; ;pid.c: 26: TRISC0=1;
+"26
+[e = _TRISC0 -> -> 1 `i `b ]
+[; ;pid.c: 27: TRISC3=1;
+"27
+[e = _TRISC3 -> -> 1 `i `b ]
+[; ;pid.c: 28: TRISC4=1;
+"28
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;pid.c: 29: TRISC5=1;
+"29
+[e = _TRISC5 -> -> 1 `i `b ]
+[; ;pid.c: 30: }
+"30
+[e :UE 101 ]
+}
+"33
 [v _Trace_PID `(i  1 ef ]
 {
-[; ;pid.c: 20: int Trace_PID()
-[; ;pid.c: 21: {
+[; ;pid.c: 32: int Trace_PID()
+[; ;pid.c: 33: {
 [e :U _Trace_PID ]
 [f ]
-[; ;pid.c: 22: Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
-"22
-[e = _Trace_Byte -> | | | | | | | << -> _RC0 `i -> 7 `i << -> _RC3 `i -> 6 `i << -> _RE0 `i -> 5 `i << -> _RE1 `i -> 4 `i << -> _RE2 `i -> 3 `i << -> _RA4 `i -> 2 `i << -> _RC4 `i -> 1 `i -> _RC5 `i `uc ]
-[; ;pid.c: 24: switch(Trace_Byte)
-"24
-[e $U 103  ]
-[; ;pid.c: 25: {
-"25
-{
-[; ;pid.c: 27: case 0B11100111:
-"27
-[e :U 104 ]
-[; ;pid.c: 28: turn_err=0;
-"28
-[e = _turn_err -> 0 `i ]
-[; ;pid.c: 29: break;
-"29
-[e $U 102  ]
-[; ;pid.c: 30: case 0B11110111:
-"30
-[e :U 105 ]
-[; ;pid.c: 31: turn_err=-1;
-"31
-[e = _turn_err -U -> 1 `i ]
-[; ;pid.c: 32: break;
-"32
-[e $U 102  ]
-[; ;pid.c: 33: case 0B11101111:
-"33
-[e :U 106 ]
-[; ;pid.c: 34: turn_err=1;
+[; ;pid.c: 34: Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
 "34
-[e = _turn_err -> 1 `i ]
-[; ;pid.c: 35: break;
-"35
-[e $U 102  ]
-[; ;pid.c: 37: case 0B11001111:
+[e = _Trace_Byte -> | | | | | | | << -> _RC0 `i -> 7 `i << -> _RC3 `i -> 6 `i << -> _RE0 `i -> 5 `i << -> _RE1 `i -> 4 `i << -> _RE2 `i -> 3 `i << -> _RA4 `i -> 2 `i << -> _RC4 `i -> 1 `i -> _RC5 `i `uc ]
+[; ;pid.c: 36: switch(Trace_Byte)
+"36
+[e $U 104  ]
+[; ;pid.c: 37: {
 "37
-[e :U 107 ]
-[; ;pid.c: 38: turn_err=2;
-"38
-[e = _turn_err -> 2 `i ]
-[; ;pid.c: 39: break;
+{
+[; ;pid.c: 39: case 0B11100111:
 "39
-[e $U 102  ]
-[; ;pid.c: 40: case 0B11011111:
+[e :U 105 ]
+[; ;pid.c: 40: turn_err=0;
 "40
-[e :U 108 ]
-[; ;pid.c: 41: turn_err=3;
+[e = _turn_err -> 0 `i ]
+[; ;pid.c: 41: break;
 "41
-[e = _turn_err -> 3 `i ]
-[; ;pid.c: 42: break;
+[e $U 103  ]
+[; ;pid.c: 42: case 0B11110111:
 "42
-[e $U 102  ]
-[; ;pid.c: 43: case 0B10011111:
+[e :U 106 ]
+[; ;pid.c: 43: turn_err=-1;
 "43
-[e :U 109 ]
-[; ;pid.c: 44: turn_err=4;
+[e = _turn_err -U -> 1 `i ]
+[; ;pid.c: 44: break;
 "44
-[e = _turn_err -> 4 `i ]
-[; ;pid.c: 45: break;
+[e $U 103  ]
+[; ;pid.c: 45: case 0B11101111:
 "45
-[e $U 102  ]
-[; ;pid.c: 46: case 0B10111111:
+[e :U 107 ]
+[; ;pid.c: 46: turn_err=1;
 "46
-[e :U 110 ]
-[; ;pid.c: 47: turn_err=5;
+[e = _turn_err -> 1 `i ]
+[; ;pid.c: 47: break;
 "47
-[e = _turn_err -> 5 `i ]
-[; ;pid.c: 48: break;
-"48
-[e $U 102  ]
-[; ;pid.c: 49: case 0B00111111:
+[e $U 103  ]
+[; ;pid.c: 49: case 0B11001111:
 "49
-[e :U 111 ]
-[; ;pid.c: 50: turn_err=6;
+[e :U 108 ]
+[; ;pid.c: 50: turn_err=2;
 "50
-[e = _turn_err -> 6 `i ]
+[e = _turn_err -> 2 `i ]
 [; ;pid.c: 51: break;
 "51
-[e $U 102  ]
-[; ;pid.c: 52: case 0B01111111:
+[e $U 103  ]
+[; ;pid.c: 52: case 0B11011111:
 "52
-[e :U 112 ]
-[; ;pid.c: 53: turn_err=7;
+[e :U 109 ]
+[; ;pid.c: 53: turn_err=3;
 "53
-[e = _turn_err -> 7 `i ]
+[e = _turn_err -> 3 `i ]
 [; ;pid.c: 54: break;
 "54
-[e $U 102  ]
-[; ;pid.c: 57: case 0B11110011:
+[e $U 103  ]
+[; ;pid.c: 55: case 0B10011111:
+"55
+[e :U 110 ]
+[; ;pid.c: 56: turn_err=4;
+"56
+[e = _turn_err -> 4 `i ]
+[; ;pid.c: 57: break;
 "57
-[e :U 113 ]
-[; ;pid.c: 58: turn_err=-2;
+[e $U 103  ]
+[; ;pid.c: 58: case 0B10111111:
 "58
-[e = _turn_err -U -> 2 `i ]
-[; ;pid.c: 59: break;
+[e :U 111 ]
+[; ;pid.c: 59: turn_err=5;
 "59
-[e $U 102  ]
-[; ;pid.c: 60: case 0B11111011:
+[e = _turn_err -> 5 `i ]
+[; ;pid.c: 60: break;
 "60
-[e :U 114 ]
-[; ;pid.c: 61: turn_err=-3;
+[e $U 103  ]
+[; ;pid.c: 61: case 0B00111111:
 "61
-[e = _turn_err -U -> 3 `i ]
-[; ;pid.c: 62: break;
+[e :U 112 ]
+[; ;pid.c: 62: turn_err=6;
 "62
-[e $U 102  ]
-[; ;pid.c: 63: case 0B11111001:
+[e = _turn_err -> 6 `i ]
+[; ;pid.c: 63: break;
 "63
-[e :U 115 ]
-[; ;pid.c: 64: turn_err=-4;
+[e $U 103  ]
+[; ;pid.c: 64: case 0B01111111:
 "64
-[e = _turn_err -U -> 4 `i ]
-[; ;pid.c: 65: break;
+[e :U 113 ]
+[; ;pid.c: 65: turn_err=7;
 "65
-[e $U 102  ]
-[; ;pid.c: 66: case 0B11111101:
+[e = _turn_err -> 7 `i ]
+[; ;pid.c: 66: break;
 "66
-[e :U 116 ]
-[; ;pid.c: 67: turn_err=-5;
-"67
-[e = _turn_err -U -> 5 `i ]
-[; ;pid.c: 68: break;
-"68
-[e $U 102  ]
-[; ;pid.c: 69: case 0B11111100:
+[e $U 103  ]
+[; ;pid.c: 69: case 0B11110011:
 "69
-[e :U 117 ]
-[; ;pid.c: 70: turn_err=-6;
+[e :U 114 ]
+[; ;pid.c: 70: turn_err=-2;
 "70
-[e = _turn_err -U -> 6 `i ]
+[e = _turn_err -U -> 2 `i ]
 [; ;pid.c: 71: break;
 "71
-[e $U 102  ]
-[; ;pid.c: 72: case 0B11111110:
+[e $U 103  ]
+[; ;pid.c: 72: case 0B11111011:
 "72
-[e :U 118 ]
-[; ;pid.c: 73: turn_err=-7;
+[e :U 115 ]
+[; ;pid.c: 73: turn_err=-3;
 "73
-[e = _turn_err -U -> 7 `i ]
+[e = _turn_err -U -> 3 `i ]
 [; ;pid.c: 74: break;
 "74
-[e $U 102  ]
+[e $U 103  ]
+[; ;pid.c: 75: case 0B11111001:
 "75
-}
-[; ;pid.c: 75: }
-[e $U 102  ]
-"24
-[e :U 103 ]
-[e [\ _Trace_Byte , $ -> -> 231 `i `uc 104
- , $ -> -> 247 `i `uc 105
- , $ -> -> 239 `i `uc 106
- , $ -> -> 207 `i `uc 107
- , $ -> -> 223 `i `uc 108
- , $ -> -> 159 `i `uc 109
- , $ -> -> 191 `i `uc 110
- , $ -> -> 63 `i `uc 111
- , $ -> -> 127 `i `uc 112
- , $ -> -> 243 `i `uc 113
- , $ -> -> 251 `i `uc 114
- , $ -> -> 249 `i `uc 115
- , $ -> -> 253 `i `uc 116
- , $ -> -> 252 `i `uc 117
- , $ -> -> 254 `i `uc 118
- 102 ]
-"75
-[e :U 102 ]
-[; ;pid.c: 77: err_difference= turn_err - last_err;
+[e :U 116 ]
+[; ;pid.c: 76: turn_err=-4;
+"76
+[e = _turn_err -U -> 4 `i ]
+[; ;pid.c: 77: break;
 "77
-[e = _err_difference - _turn_err _last_err ]
-[; ;pid.c: 79: last_err= turn_err;
+[e $U 103  ]
+[; ;pid.c: 78: case 0B11111101:
+"78
+[e :U 117 ]
+[; ;pid.c: 79: turn_err=-5;
 "79
-[e = _last_err _turn_err ]
-[; ;pid.c: 81: return (int)(turn_err*Kp + err_difference*Kd);
+[e = _turn_err -U -> 5 `i ]
+[; ;pid.c: 80: break;
+"80
+[e $U 103  ]
+[; ;pid.c: 81: case 0B11111100:
 "81
-[e ) -> + * -> _turn_err `f _Kp -> * _err_difference _Kd `f `i ]
-[e $UE 101  ]
-[; ;pid.c: 82: }
+[e :U 118 ]
+[; ;pid.c: 82: turn_err=-6;
 "82
-[e :UE 101 ]
+[e = _turn_err -U -> 6 `i ]
+[; ;pid.c: 83: break;
+"83
+[e $U 103  ]
+[; ;pid.c: 84: case 0B11111110:
+"84
+[e :U 119 ]
+[; ;pid.c: 85: turn_err=-7;
+"85
+[e = _turn_err -U -> 7 `i ]
+[; ;pid.c: 86: break;
+"86
+[e $U 103  ]
+"87
+}
+[; ;pid.c: 87: }
+[e $U 103  ]
+"36
+[e :U 104 ]
+[e [\ _Trace_Byte , $ -> -> 231 `i `uc 105
+ , $ -> -> 247 `i `uc 106
+ , $ -> -> 239 `i `uc 107
+ , $ -> -> 207 `i `uc 108
+ , $ -> -> 223 `i `uc 109
+ , $ -> -> 159 `i `uc 110
+ , $ -> -> 191 `i `uc 111
+ , $ -> -> 63 `i `uc 112
+ , $ -> -> 127 `i `uc 113
+ , $ -> -> 243 `i `uc 114
+ , $ -> -> 251 `i `uc 115
+ , $ -> -> 249 `i `uc 116
+ , $ -> -> 253 `i `uc 117
+ , $ -> -> 252 `i `uc 118
+ , $ -> -> 254 `i `uc 119
+ 103 ]
+"87
+[e :U 103 ]
+[; ;pid.c: 89: err_difference= turn_err - last_err;
+"89
+[e = _err_difference - _turn_err _last_err ]
+[; ;pid.c: 91: last_err= turn_err;
+"91
+[e = _last_err _turn_err ]
+[; ;pid.c: 93: return (int)(turn_err*Kp + err_difference*Kd);
+"93
+[e ) -> + * -> _turn_err `f _Kp -> * _err_difference _Kd `f `i ]
+[e $UE 102  ]
+[; ;pid.c: 94: }
+"94
+[e :UE 102 ]
 }

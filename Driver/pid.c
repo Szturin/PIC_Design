@@ -1,8 +1,5 @@
 #include <pic.h>
 
-float filt_velocity=0;
-float last_filt_velocity=0;
-
 #define Trace_PIN0		RC0
 #define Trace_PIN1		RC3
 #define Trace_PIN2		RE0
@@ -14,74 +11,77 @@ float last_filt_velocity=0;
 
 unsigned char Trace_Byte;
 
-typedef struct 
-{
-	float Kp;
-	float Ki;
-	float Kd;
-	float error;
-	float last_error;
-	float error_sum;
-	float error_difference;
-	float velocity_sum;
-}PID;
-
-PID Velocity;
-
-
-void Velociy_PID_Init()
-{
-	Velocity.Kp=5.8;
-	Velocity.Ki=0.06;
-	Velocity.Kd=0;	
-}
-
-
-
-void I_amplitude_limiting(unsigned char number,unsigned char *Error_sum)
-{
-	if(*Error_sum > number)
-	{
-		*Error_sum = number;
-	}
+float Kp=3.2;
+int Kd=0;
+static int turn_err;
+static int last_err;
+static int err_difference;
 	
-	if(*Error_sum <- number)
-	{
-		*Error_sum = -number;
-	}
-}
-
-/*速度环*/
-int Velocity_PID(int velocity,int velocity_calcu)
-{
-	float a = 0.3;//一阶互补滤波
-	
-	if(velocity_calcu < 0)
-	{
-		velocity = -velocity;
-	}
-	
-	Velocity.error = velocity - velocity_calcu;//误差
-	filt_velocity = a*Velocity.error+(1-a)*last_filt_velocity;
-	Velocity.error_sum += filt_velocity ;//误差累加
-	I_amplitude_limiting(20,&Velocity.error_sum);
-	last_filt_velocity = filt_velocity;
-	
-	return ((int)(filt_velocity * Velocity.Kp + Velocity.error_sum * Velocity.Ki);//PID控制器响应结?? 
-}
-
 int Trace_PID()
-{
-	float Kp=3.0;
-	float Kd=1.0;
-	
-	static int turn_err;
-	static int last_err;
-	static int err_difference;
-	
+{	
 	Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
 	
+	switch(Trace_Byte)
+	{
+		//直行
+		case 0B11100111: 
+			turn_err=0;
+			break;
+		case 0B11110111:
+			turn_err=-1;
+			break;
+		case 0B11101111:
+			turn_err=1;
+			break;
+		//左转
+		case 0B11001111:
+			turn_err=2;
+			break;
+		case 0B11011111:
+			turn_err=3;
+			break;
+		case 0B10011111:
+			turn_err=4;
+			break;
+		case 0B10111111:
+			turn_err=5;
+			break;
+		case 0B00111111:
+			turn_err=6;
+			break;
+		case 0B01111111:
+			turn_err=7;
+			break;
+
+		//右转
+		case 0B11110011:
+			turn_err=-2;
+			break;
+		case 0B11111011:
+			turn_err=-3;
+			break;
+		case 0B11111001:
+			turn_err=-4;
+			break;
+		case 0B11111101:
+			turn_err=-5;
+			break;
+		case 0B11111100:
+			turn_err=-6;
+			break;
+		case 0B11111110:
+			turn_err=-7;
+			break;
+	}
 	
+	err_difference= turn_err - last_err;
+	
+	last_err= turn_err;
+	
+	return (int)(turn_err*Kp + err_difference*Kd);
+}
+
+	/*
 	if( Trace_PIN4==0 && Trace_PIN3 == 0 )//直行
 	{
 		turn_err=0;
@@ -102,9 +102,4 @@ int Trace_PID()
 	{
 		turn_err=2;
 	}
-	
-	err_difference= turn_err - last_err;
-	last_err= turn_err;
-	
-	return (int)(turn_err*Kp + err_difference*Kd);
-}
+	*/

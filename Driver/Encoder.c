@@ -14,5 +14,5 @@ void Encoder_Init()
 	/*∂® ±∆˜0÷–∂œ≈‰÷√*/
 	T0IE=1;
 	T0IF=0;
-	TMR0=0;
+	TMR0=60;
 }

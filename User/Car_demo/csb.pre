@@ -1121,10 +1121,14 @@ while(i--);
 
 void csb_init()
 {
-GIE=1;PEIE=1;TMR1IE=1;TMR1IF=0;
+GIE=1;
+PEIE=1;
 
-TRISE1=0;TRISE2=1;
-ADCON1=7;TRISA=0;TRISD=0;
+TMR1IF=0;
+
+TRISA1=1;
+TRISA0=0;
+ADCON1=7;TRISD=0;
 
 RA0 = 0;
 RA1 = 1;
@@ -1150,7 +1154,7 @@ RA0 = 0;
 
 while(!RA1);
 TMR1ON=1;
-while(RA1 == 1 && TMR1IF == 0);
+while((RA1 == 1) && (TMR1IF == 0));
 ah = TMR1H;
 al = TMR1L;
 TMR1ON=0;

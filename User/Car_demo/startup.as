@@ -8,10 +8,10 @@
 	; Compiler options:
 	;
 	; -o202121365038.cof -m202121365038.map --summary=default \
-	; --output=default Car_demo.p1 LCD1602.p1 KeyBoard.p1 iic.p1 Led.p1 \
-	; Motor.p1 spi.p1 Usart.p1 Delay.p1 Timer.p1 Sys.p1 Encoder.p1 pid.p1 \
-	; csb.p1 --chip=16F877A -P --runtime=default --opt=default -D__DEBUG=1 \
-	; -g --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+	; --output=default LCD1602.p1 KeyBoard.p1 iic.p1 Led.p1 Motor.p1 spi.p1 \
+	; Usart.p1 Delay.p1 Timer.p1 Sys.p1 Encoder.p1 pid.p1 csb.p1 \
+	; Car_demo.p1 --chip=16F877A -P --runtime=default --opt=default \
+	; -D__DEBUG=1 -g --asmlist --errformat=Error   [%n] %f; %l.%c %s \
 	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
 	;
 

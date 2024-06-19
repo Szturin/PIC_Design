@@ -1,5 +1,5 @@
 
-# 1 "D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c"
+# 1 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\csbteset.c"
 
 # 82 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f877a.h"
 volatile unsigned char INDF @ 0x000;
@@ -1090,76 +1090,141 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 12 "D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c"
-unsigned char Trace_Byte;
+# 2 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\csbteset.c"
+asm("\tpsect config,class=CONFIG,delta=2"); asm("\tdw ""0xFF29");
 
-float Kp=3.2;
-int Kd=0;
-static int turn_err;
-static int last_err;
-static int err_difference;
+# 12 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdio.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
 
-int Trace_PID()
+# 31 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma inline(__va_start)
+extern void * __va_start(void);
+
+#pragma inline(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 27 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdio.h"
+extern int errno;
+
+# 58
+struct __prbuf
 {
-Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+char * ptr;
+void (* func)(char);
+};
 
-switch(Trace_Byte)
+# 17 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\conio.h"
+extern int errno;
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern bit kbhit(void);
+
+# 31
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 103 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+# 195
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...);
+extern int sscanf(const char *, const char *, ...);
+extern int vprintf(const char *, va_list);
+extern int vsprintf(char *, const char *, va_list);
+extern int vscanf(const char *, va_list ap);
+extern int vsscanf(const char *, const char *, va_list);
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H"
+void LCD1602_Delay();
+void LCD1602_WriteCommand(unsigned char Command);
+void LCD1602_WriteData(unsigned char Data);
+void LCD1602_Init(void);
+void LCD1602_WriteChar(unsigned char row,unsigned char column,unsigned char ch);
+void LCD1602_WriteString(unsigned char row,unsigned char column,unsigned char *String);
+int LCD1602_Pow(unsigned char X,unsigned char Y);
+void LCD1602_WriteNum(unsigned char row,unsigned char column,unsigned int number,unsigned char lenth);
+void LCD1602_GPIO_Init();
+
+# 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\KeyBoard.H"
+unsigned char Test_Key_Read_Matrix();
+void PIC_RBIE_Init();
+unsigned char RBIE_Key_Proc();
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\iic.H"
+unsigned char IIC_ReadReg_Byte(unsigned char MachineAddr,unsigned char RegAddr);
+void IIC_WriteReg_Byte(unsigned char MachineAddr,unsigned char RegAddr,unsigned char Data);
+unsigned char Trace_Read_Data();
+unsigned char Trace_Write_Command();
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H"
+void Motor_GPIO_Init();
+void Motor_CCP_PWM_Init();
+void Motor_Speed_Set(int Speed1,int Speed2);
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Usart.H"
+void Serial_PrintString(unsigned char *String);
+void Usart_Init(void);
+void Usart_GPIO_Init(void);
+
+# 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Encoder.H"
+void Encoder_Init();
+
+# 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H"
+int Velocity_PID(int velocity,int velocity_calcu);
+void Velociy_PID_Init();
+int Trace_PID();
+
+# 4 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H"
+void csb_init();
+unsigned int csb();
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Sys.H"
+void System_Init(void);
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Timer.H"
+void TIM0_Init();
+void TIM1_Init();
+void TIM2_Init();
+
+# 3 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Delay.H"
+void Delay_ms(unsigned int x);
+
+# 23 "D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\csbteset.c"
+unsigned int distance;
+void main()
+{
+LCD1602_GPIO_Init();
+LCD1602_Init();
+LCD1602_WriteNum(1,8,6,3);
+csb_init();
+
+while(1)
 {
 
-case 0B11100111:
-turn_err=0;
-break;
-case 0B11110111:
-turn_err=-1;
-break;
-case 0B11101111:
-turn_err=1;
-break;
-
-case 0B11001111:
-turn_err=2;
-break;
-case 0B11011111:
-turn_err=3;
-break;
-case 0B10011111:
-turn_err=4;
-break;
-case 0B10111111:
-turn_err=5;
-break;
-case 0B00111111:
-turn_err=6;
-break;
-case 0B01111111:
-turn_err=7;
-break;
-
-
-case 0B11110011:
-turn_err=-2;
-break;
-case 0B11111011:
-turn_err=-3;
-break;
-case 0B11111001:
-turn_err=-4;
-break;
-case 0B11111101:
-turn_err=-5;
-break;
-case 0B11111100:
-turn_err=-6;
-break;
-case 0B11111110:
-turn_err=-7;
-break;
+distance = csb();
+LCD1602_WriteNum(1,8,distance,3);
 }
-
-err_difference= turn_err - last_err;
-
-last_err= turn_err;
-
-return (int)(turn_err*Kp + err_difference*Kd);
 }
-

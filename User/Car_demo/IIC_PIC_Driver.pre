@@ -1,5 +1,5 @@
 
-# 1 "D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c"
+# 1 "D:\6_pic_project\00_Design_Flow_Car\Driver\IIC_PIC_Driver.c"
 
 # 82 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f877a.h"
 volatile unsigned char INDF @ 0x000;
@@ -1090,76 +1090,104 @@ extern void memcpyee(eeprom unsigned char *to, const unsigned char *from, unsign
 #pragma inline(_delay)
 extern void _delay(unsigned long);
 
-# 12 "D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c"
-unsigned char Trace_Byte;
+# 13 "D:\6_pic_project\00_Design_Flow_Car\Driver\IIC_PIC_Driver.c"
+void InitI2C(void);
+void I2C_Start(void);
+void I2C_ReStart(void);
+void I2C_Stop(void);
+void I2C_Send_ACK(void);
+void I2C_Send_NACK(void);
+uint8_t I2C_Write_Byte(unsigned char);
+unsigned char I2C_Read_Byte(void);
 
-float Kp=3.2;
-int Kd=0;
-static int turn_err;
-static int last_err;
-static int err_difference;
-
-int Trace_PID()
+void InitI2C(void)
 {
-Trace_Byte = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+TRISC4 = 1;
+TRISC3 = 1;
 
-switch(Trace_Byte)
-{
-
-case 0B11100111:
-turn_err=0;
-break;
-case 0B11110111:
-turn_err=-1;
-break;
-case 0B11101111:
-turn_err=1;
-break;
-
-case 0B11001111:
-turn_err=2;
-break;
-case 0B11011111:
-turn_err=3;
-break;
-case 0B10011111:
-turn_err=4;
-break;
-case 0B10111111:
-turn_err=5;
-break;
-case 0B00111111:
-turn_err=6;
-break;
-case 0B01111111:
-turn_err=7;
-break;
-
-
-case 0B11110011:
-turn_err=-2;
-break;
-case 0B11111011:
-turn_err=-3;
-break;
-case 0B11111001:
-turn_err=-4;
-break;
-case 0B11111101:
-turn_err=-5;
-break;
-case 0B11111100:
-turn_err=-6;
-break;
-case 0B11111110:
-turn_err=-7;
-break;
+SSPADD = ((_XTAL_FREQ/4000)/100) - 1;
+SSPSTAT = 0x80;
+SSPCON = 0x28;
 }
 
-err_difference= turn_err - last_err;
+void I2C_Start(void)
+{
+SEN = 1;
+while(!SSPIF);
+SSPIF = 0;
+}
 
-last_err= turn_err;
 
-return (int)(turn_err*Kp + err_difference*Kd);
+void I2C_ReStart(void)
+{
+RSEN = 1;
+while(!SSPIF);
+SSPIF = 0;
+}
+
+
+
+void I2C_Send_ACK(void)
+{
+ACKDT = 0;
+ACKEN = 1;
+while(!SSPIF);
+SSPIF = 0;
+}
+
+
+
+void I2C_Send_NACK(void)
+{
+ACKDT = 1;
+ACKEN = 1;
+while(!SSPIF);
+SSPIF = 0;
+}
+
+
+uint8_t I2C_Write_Byte(unsigned char Byte)
+{
+SSPBUF = Byte;
+while(!SSPIF);
+SSPIF = 0;
+
+return ACKSTAT;
+}
+
+
+unsigned char I2C_Read_Byte(void)
+{
+RCEN = 1;
+while(!SSPIF);
+SSPIF = 0;
+
+return SSPBUF;
+}
+
+void IIC_Trace_Init()
+{
+InitI2C();
+
+
+
+}
+
+unsigned char IIC_Trace_GetData()
+{
+unsigned char Byte = 0;
+
+I2C_Start();
+
+I2C_Write_Byte(0x9C + 1);
+I2C_Send_ACK();
+
+Byte = I2C_Read_Byte();
+
+I2C_Send_NACK();
+I2C_Stop();
+
+return Byte;
+
 }
 

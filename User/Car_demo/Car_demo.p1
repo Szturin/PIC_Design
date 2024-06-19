@@ -881,46 +881,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EECON1bits `VS99  1 e@396 ]
 "1167 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\pic16f877a.h
 [v _EECON2 `Vuc  1 e@397 ]
-"32 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"24 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _bluetooth `uc  1 e ]
-"34 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"26 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _PWM1 `i  1 e ]
-"34 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"26 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _PWM2 `i  1 e ]
-"35 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"27 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _PWM `i  1 e ]
-"38 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"30 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Counter_temp `ui  1 e ]
-"39 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"31 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Timer0_Counter `ui  1 e ]
-"40 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"32 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _m `uc  1 e ]
-"41 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _Encoder_Counter `uc  1 e ]
-"43 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"33 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Encoder_Counter `ui  1 e ]
+"35 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Motor_Flag `uc  1 e ]
-"44 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"36 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Speed `i  1 e ]
-"45 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"37 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Speed_Set `i  1 e ]
-"46 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"38 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Turn `i  1 e ]
-"48 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"40 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Trace_Byte `uc  1 e ]
-"50 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _ack `uc  1 e ]
-"52 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"43 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Speed_left `uc  1 e ]
-"52 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"43 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Speed_right `uc  1 e ]
-"54 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v _distance `uc  1 e ]
-"6 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Trace_PID `(i  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
-[v _Motor_Speed_Set `(v  0 ef2`i`i ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Velocity_PID `(i  0 ef2`i`i ]
+"44 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Speed_Velcolity `uc  1 e ]
+"46 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _distance `ui  1 e ]
+"48 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _yz `uc  -> 8 `i e ]
+"49 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _mod `uc  1 e ]
+"51 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _KeyNum `uc  1 e ]
+"53 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _odomoter_counter `ui  1 e ]
+"55 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Turn_PWM `i  1 e ]
+"57 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _IO_flag `uc  1 e ]
+"58 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Circle_Mode `uc  1 e ]
+"59 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Start_Find_flag `uc  1 e ]
+"60 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Bifurcate_Flag `uc  1 e ]
+"61 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Stop_Flag `uc  1 e ]
 [p mainexit ]
 "11 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
 [v _LCD1602_GPIO_Init `(v  0 ef ]
@@ -934,23 +948,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Usart_Init `(v  0 ef ]
 "3 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
 [v _Motor_GPIO_Init `(v  0 ef ]
-"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H
-[v _csb_init `(v  0 ef ]
 "4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
 [v _Motor_CCP_PWM_Init `(v  0 ef ]
+"4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H
+[v _csb_init `(v  0 ef ]
 "3 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\System\Delay.H
 [v _Delay_ms `(v  0 ef1`ui ]
 "207 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\include\stdio.h
 [v _printf `(i  0 ev`*Cuc ]
+"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Motor.H
+[v _Motor_Speed_Set `(v  0 ef2`i`i ]
 "4 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\Encoder.H
 [v _Encoder_Init `(v  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
-[v _Velociy_PID_Init `(v  0 ef ]
-"5 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\csb.H
-[v _csb `(ui  0 ef ]
-"10 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\LCD1602.H
-[v _LCD1602_WriteNum `(v  0 ef4`uc`uc`ui`uc ]
-[p f _printf 8388736 ]
+"3 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\..\..\Driver\PID.H
+[v _Trace_PID `(i  0 ef ]
+[p f _printf 8388608 ]
 [; ;pic16f877a.h: 82: volatile unsigned char INDF @ 0x000;
 [; ;pic16f877a.h: 86: volatile unsigned char TMR0 @ 0x001;
 [; ;pic16f877a.h: 90: volatile unsigned char PCL @ 0x002;
@@ -1829,7 +1841,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD1602.H: 10: void LCD1602_WriteNum(unsigned char row,unsigned char column,unsigned int number,unsigned char lenth);
 [; ;LCD1602.H: 11: void LCD1602_GPIO_Init();
 [; ;KeyBoard.H: 4: unsigned char Test_Key_Read_Matrix();
-[; ;KeyBoard.H: 5: unsigned char RBIE_Key_Proc();
+[; ;KeyBoard.H: 5: void PIC_RBIE_Init();
+[; ;KeyBoard.H: 6: unsigned char RBIE_Key_Proc();
 [; ;iic.H: 3: unsigned char IIC_ReadReg_Byte(unsigned char MachineAddr,unsigned char RegAddr);
 [; ;iic.H: 4: void IIC_WriteReg_Byte(unsigned char MachineAddr,unsigned char RegAddr,unsigned char Data);
 [; ;iic.H: 5: unsigned char Trace_Read_Data();
@@ -1841,9 +1854,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Usart.H: 4: void Usart_Init(void);
 [; ;Usart.H: 5: void Usart_GPIO_Init(void);
 [; ;Encoder.H: 4: void Encoder_Init();
-[; ;PID.H: 4: int Velocity_PID(int velocity,int velocity_calcu);
-[; ;PID.H: 5: void Velociy_PID_Init();
-[; ;PID.H: 6: int Trace_PID();
+[; ;PID.H: 3: int Trace_PID();
 [; ;csb.H: 4: void csb_init();
 [; ;csb.H: 5: unsigned int csb();
 [; ;Sys.H: 3: void System_Init(void);
@@ -1851,240 +1862,694 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Timer.H: 4: void TIM1_Init();
 [; ;Timer.H: 5: void TIM2_Init();
 [; ;Delay.H: 3: void Delay_ms(unsigned int x);
-[; ;Car_demo.c: 32: unsigned char bluetooth;
-"34
+[; ;Car_demo.c: 24: unsigned char bluetooth;
+"26
 [i _PWM1
 -> 0 `i
 ]
 [i _PWM2
 -> 0 `i
 ]
-[; ;Car_demo.c: 34: int PWM1=0,PWM2=0;
-[; ;Car_demo.c: 35: int PWM;
-[; ;Car_demo.c: 38: unsigned int Counter_temp;
-[; ;Car_demo.c: 39: unsigned int Timer0_Counter;
-[; ;Car_demo.c: 40: unsigned char m;
-[; ;Car_demo.c: 41: unsigned char Encoder_Counter;
-[; ;Car_demo.c: 43: unsigned char Motor_Flag;
-[; ;Car_demo.c: 44: int Speed;
-[; ;Car_demo.c: 45: int Speed_Set;
-[; ;Car_demo.c: 46: int Turn;
-[; ;Car_demo.c: 48: unsigned char Trace_Byte;
-[; ;Car_demo.c: 50: unsigned char ack;
-[; ;Car_demo.c: 52: unsigned char Speed_left,Speed_right;
-[; ;Car_demo.c: 54: unsigned char distance;
+[; ;Car_demo.c: 26: int PWM1=0,PWM2=0;
+[; ;Car_demo.c: 27: int PWM;
+[; ;Car_demo.c: 30: unsigned int Counter_temp;
+[; ;Car_demo.c: 31: unsigned int Timer0_Counter;
+[; ;Car_demo.c: 32: unsigned char m;
+[; ;Car_demo.c: 33: unsigned int Encoder_Counter;
+[; ;Car_demo.c: 35: unsigned char Motor_Flag;
+[; ;Car_demo.c: 36: int Speed;
+[; ;Car_demo.c: 37: int Speed_Set;
+[; ;Car_demo.c: 38: int Turn;
+[; ;Car_demo.c: 40: unsigned char Trace_Byte;
+[; ;Car_demo.c: 43: unsigned char Speed_left,Speed_right;
+[; ;Car_demo.c: 44: unsigned char Speed_Velcolity;
+[; ;Car_demo.c: 46: unsigned int distance;
+"48
+[i _yz
+:U ..
+-> -> 0 `i `uc
+..
+]
+[; ;Car_demo.c: 48: unsigned char yz[8]={0};
+[; ;Car_demo.c: 49: unsigned char mod;
+[; ;Car_demo.c: 51: unsigned char KeyNum;
+[; ;Car_demo.c: 53: unsigned int odomoter_counter;
+[; ;Car_demo.c: 55: int Turn_PWM;
+"57
+[i _IO_flag
+-> -> 0 `i `uc
+]
+[; ;Car_demo.c: 57: unsigned char IO_flag=0;
 "58
-[v F1233 `(v  1 tf ]
-[v _Service `IF1233  1 e ]
-{
-[; ;Car_demo.c: 57: void interrupt Service()
-[; ;Car_demo.c: 58: {
-[e :U _Service ]
-[f ]
-[; ;Car_demo.c: 59: Speed_left = 40 - Trace_PID();
+[i _Circle_Mode
+-> -> 0 `i `uc
+]
+[; ;Car_demo.c: 58: unsigned char Circle_Mode=0;
 "59
-[e = _Speed_left -> - -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 60: Speed_right = 40 + Trace_PID();
+[i _Start_Find_flag
+-> -> 0 `i `uc
+]
+[; ;Car_demo.c: 59: unsigned char Start_Find_flag=0;
 "60
-[e = _Speed_right -> + -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 61: Motor_Speed_Set(Speed_left,Speed_right);
-"61
-[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
-[; ;Car_demo.c: 63: if(RCIF==1)
-"63
-[e $ ! == -> _RCIF `i -> 1 `i 103  ]
-[; ;Car_demo.c: 64: {
+[i _Bifurcate_Flag
+-> -> 0 `i `uc
+]
+[; ;Car_demo.c: 60: unsigned char Bifurcate_Flag=0;
+[; ;Car_demo.c: 61: unsigned char Stop_Flag;
 "64
+[v _yanzheng `(v  1 ef ]
 {
-[; ;Car_demo.c: 65: bluetooth=RCREG;
+[; ;Car_demo.c: 63: void yanzheng()
+[; ;Car_demo.c: 64: {
+[e :U _yanzheng ]
+[f ]
 "65
-[e = _bluetooth _RCREG ]
-[; ;Car_demo.c: 67: if(bluetooth == '#'){}
+[v _temp `uc  1 a ]
+[; ;Car_demo.c: 65: unsigned char temp = mod;
+[e = _temp _mod ]
+[; ;Car_demo.c: 66: for(int i=0;i<8;i++)
+"66
+{
+[v _i `i  1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 8 `i 103  ]
+[e $U 104  ]
 "67
-[e $ ! == -> _bluetooth `ui -> 35 `ui 104  ]
-{
-}
-[e :U 104 ]
-[; ;Car_demo.c: 79: RCIF=0;
-"79
-[e = _RCIF -> -> 0 `i `b ]
-"80
-}
-[; ;Car_demo.c: 80: }
-[e $U 105  ]
-"81
 [e :U 103 ]
-[; ;Car_demo.c: 81: else if(T0IF==1)
-[e $ ! == -> _T0IF `i -> 1 `i 106  ]
-[; ;Car_demo.c: 82: {
-"82
+[; ;Car_demo.c: 67: {
 {
-[; ;Car_demo.c: 83: TMR0=60;
-"83
-[e = _TMR0 -> -> 60 `i `uc ]
-[; ;Car_demo.c: 84: T0IF=0;
-"84
-[e = _T0IF -> -> 0 `i `b ]
-[; ;Car_demo.c: 86: Speed = Encoder_Counter;
-"86
-[e = _Speed -> _Encoder_Counter `i ]
-[; ;Car_demo.c: 87: Encoder_Counter=0;
-"87
-[e = _Encoder_Counter -> -> 0 `i `uc ]
-[; ;Car_demo.c: 89: PWM = Velocity_PID(Speed,Speed_Set);
-"89
-[e = _PWM ( _Velocity_PID (2 , _Speed _Speed_Set ]
-[; ;Car_demo.c: 91: PWM1 = PWM;
-"91
-[e = _PWM1 _PWM ]
-[; ;Car_demo.c: 92: PWM2 = PWM;
-"92
-[e = _PWM2 _PWM ]
-"93
+[; ;Car_demo.c: 68: yz[i] = temp %2;
+"68
+[e = *U + &U _yz * -> -> _i `ui `ux -> -> # *U &U _yz `ui `ux -> % -> _temp `i -> 2 `i `uc ]
+[; ;Car_demo.c: 69: temp/=2;
+"69
+[e =/ _temp -> 2 `uc ]
+"70
 }
-[; ;Car_demo.c: 93: }
-[e $U 107  ]
-"94
-[e :U 106 ]
-[; ;Car_demo.c: 94: else if(INTF==1)
-[e $ ! == -> _INTF `i -> 1 `i 108  ]
-[; ;Car_demo.c: 95: {
-"95
-{
-[; ;Car_demo.c: 96: Encoder_Counter++;
-"96
-[e ++ _Encoder_Counter -> -> 1 `i `uc ]
-[; ;Car_demo.c: 97: INTF=0;
-"97
-[e = _INTF -> -> 0 `i `b ]
-"98
+"66
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 103  ]
+[e :U 104 ]
+"70
 }
-[e :U 108 ]
-"99
-[e :U 107 ]
-[e :U 105 ]
-[; ;Car_demo.c: 98: }
-[; ;Car_demo.c: 99: }
+[; ;Car_demo.c: 70: }
+[; ;Car_demo.c: 71: }
+"71
 [e :UE 102 ]
 }
-"104
+"76
+[v F1243 `(v  1 tf ]
+[v _Service `IF1243  1 e ]
+{
+[; ;Car_demo.c: 75: void interrupt Service()
+[; ;Car_demo.c: 76: {
+[e :U _Service ]
+[f ]
+[; ;Car_demo.c: 78: if(RCIF==1)
+"78
+[e $ ! == -> _RCIF `i -> 1 `i 107  ]
+[; ;Car_demo.c: 79: {
+"79
+{
+[; ;Car_demo.c: 80: bluetooth=RCREG;
+"80
+[e = _bluetooth _RCREG ]
+[; ;Car_demo.c: 82: if(bluetooth == '#'){}
+"82
+[e $ ! == -> _bluetooth `ui -> 35 `ui 108  ]
+{
+}
+[e :U 108 ]
+[; ;Car_demo.c: 83: RCIF=0;
+"83
+[e = _RCIF -> -> 0 `i `b ]
+"84
+}
+[; ;Car_demo.c: 84: }
+[e $U 109  ]
+"85
+[e :U 107 ]
+[; ;Car_demo.c: 85: else if(T0IF==1)
+[e $ ! == -> _T0IF `i -> 1 `i 110  ]
+[; ;Car_demo.c: 86: {
+"86
+{
+[; ;Car_demo.c: 87: TMR0=60;
+"87
+[e = _TMR0 -> -> 60 `i `uc ]
+[; ;Car_demo.c: 88: T0IF=0;
+"88
+[e = _T0IF -> -> 0 `i `b ]
+"89
+}
+[; ;Car_demo.c: 89: }
+[e $U 111  ]
+"90
+[e :U 110 ]
+[; ;Car_demo.c: 90: else if(INTF==1)
+[e $ ! == -> _INTF `i -> 1 `i 112  ]
+[; ;Car_demo.c: 91: {
+"91
+{
+[; ;Car_demo.c: 92: if(Start_Find_flag)
+"92
+[e $ ! != -> _Start_Find_flag `i -> -> -> 0 `i `uc `i 113  ]
+[; ;Car_demo.c: 93: {
+"93
+{
+[; ;Car_demo.c: 94: Encoder_Counter++;
+"94
+[e ++ _Encoder_Counter -> -> 1 `i `ui ]
+"95
+}
+[e :U 113 ]
+[; ;Car_demo.c: 95: }
+[; ;Car_demo.c: 96: INTF=0;
+"96
+[e = _INTF -> -> 0 `i `b ]
+"97
+}
+[; ;Car_demo.c: 97: }
+[e $U 114  ]
+"98
+[e :U 112 ]
+[; ;Car_demo.c: 98: else if(RBIF == 1)
+[e $ ! == -> _RBIF `i -> 1 `i 115  ]
+[; ;Car_demo.c: 99: {
+"99
+{
+[; ;Car_demo.c: 100: RBIF=0;
+"100
+[e = _RBIF -> -> 0 `i `b ]
+"101
+}
+[e :U 115 ]
+"102
+[e :U 114 ]
+[e :U 111 ]
+[e :U 109 ]
+[; ;Car_demo.c: 101: }
+[; ;Car_demo.c: 102: TMR1IF=0;
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;Car_demo.c: 103: }
+"103
+[e :UE 106 ]
+}
+"106
+[v _Start_PD `(i  1 ef ]
+{
+[; ;Car_demo.c: 105: int Start_PD()
+[; ;Car_demo.c: 106: {
+[e :U _Start_PD ]
+[f ]
+"107
+[v _Trace_Mode `uc  1 a ]
+[; ;Car_demo.c: 107: unsigned char Trace_Mode = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+[e = _Trace_Mode -> | | | | | | | << -> _RC0 `i -> 7 `i << -> _RC3 `i -> 6 `i << -> _RE0 `i -> 5 `i << -> _RE1 `i -> 4 `i << -> _RE2 `i -> 3 `i << -> _RA4 `i -> 2 `i << -> _RC4 `i -> 1 `i -> _RC5 `i `uc ]
+[; ;Car_demo.c: 108: switch(Trace_Mode)
+"108
+[e $U 118  ]
+[; ;Car_demo.c: 109: {
+"109
+{
+[; ;Car_demo.c: 110: case 0B11000001:
+"110
+[e :U 119 ]
+"111
+[e :U 120 ]
+"112
+[e :U 121 ]
+"113
+[e :U 122 ]
+[; ;Car_demo.c: 111: case 0B10000011:
+[; ;Car_demo.c: 112: case 0B00000000:
+[; ;Car_demo.c: 113: case 0B10000001:
+[; ;Car_demo.c: 114: return -99;
+"114
+[e ) -U -> 99 `i ]
+[e $UE 116  ]
+[; ;Car_demo.c: 115: case 0B01111110:
+"115
+[e :U 123 ]
+"116
+[e :U 124 ]
+"117
+[e :U 125 ]
+"118
+[e :U 126 ]
+"119
+[e :U 127 ]
+"120
+[e :U 128 ]
+[; ;Car_demo.c: 116: case 0B01111100:
+[; ;Car_demo.c: 117: case 0B00111100:
+[; ;Car_demo.c: 118: case 0B00111110:
+[; ;Car_demo.c: 119: case 0B00111101:
+[; ;Car_demo.c: 120: case 0B10111101:
+[; ;Car_demo.c: 121: return -66;
+"121
+[e ) -U -> 66 `i ]
+[e $UE 116  ]
+[; ;Car_demo.c: 122: default:
+"122
+[e :U 129 ]
+[; ;Car_demo.c: 123: return 0;
+"123
+[e ) -> 0 `i ]
+[e $UE 116  ]
+"124
+}
+[; ;Car_demo.c: 124: }
+[e $U 117  ]
+"108
+[e :U 118 ]
+[e [\ _Trace_Mode , $ -> -> 193 `i `uc 119
+ , $ -> -> 131 `i `uc 120
+ , $ -> -> 0 `i `uc 121
+ , $ -> -> 129 `i `uc 122
+ , $ -> -> 126 `i `uc 123
+ , $ -> -> 124 `i `uc 124
+ , $ -> -> 60 `i `uc 125
+ , $ -> -> 62 `i `uc 126
+ , $ -> -> 61 `i `uc 127
+ , $ -> -> 189 `i `uc 128
+ 129 ]
+"124
+[e :U 117 ]
+[; ;Car_demo.c: 125: }
+"125
+[e :UE 116 ]
+}
+"129
 [v _main `(v  1 ef ]
 {
-[; ;Car_demo.c: 103: void main()
-[; ;Car_demo.c: 104: {
+[; ;Car_demo.c: 128: void main()
+[; ;Car_demo.c: 129: {
 [e :U _main ]
 [f ]
-[; ;Car_demo.c: 106: TRISB1=0;
-"106
+[; ;Car_demo.c: 131: TRISB1=0;
+"131
 [e = _TRISB1 -> -> 0 `i `b ]
-[; ;Car_demo.c: 107: TRISA0=0;
-"107
-[e = _TRISA0 -> -> 0 `i `b ]
-[; ;Car_demo.c: 108: TRISA1=0;
-"108
-[e = _TRISA1 -> -> 0 `i `b ]
-[; ;Car_demo.c: 109: TRISE0=1;
-"109
-[e = _TRISE0 -> -> 1 `i `b ]
-[; ;Car_demo.c: 110: TRISE1=1;
-"110
-[e = _TRISE1 -> -> 1 `i `b ]
-[; ;Car_demo.c: 111: TRISE2=1;
-"111
-[e = _TRISE2 -> -> 1 `i `b ]
-[; ;Car_demo.c: 112: TRISA4=1;
-"112
-[e = _TRISA4 -> -> 1 `i `b ]
-[; ;Car_demo.c: 114: LCD1602_GPIO_Init();
-"114
-[e ( _LCD1602_GPIO_Init ..  ]
-[; ;Car_demo.c: 115: LCD1602_Init();
-"115
-[e ( _LCD1602_Init ..  ]
-[; ;Car_demo.c: 116: LCD1602_WriteString(1,0,"CAR 1");
-"116
-[e ( _LCD1602_WriteString (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> :s 1C `*uc ]
-[; ;Car_demo.c: 117: LCD1602_WriteString(2,0,"Speed:");
-"117
-[e ( _LCD1602_WriteString (3 , , -> -> 2 `i `uc -> -> 0 `i `uc -> :s 2C `*uc ]
-[; ;Car_demo.c: 119: Usart_GPIO_Init();
-"119
-[e ( _Usart_GPIO_Init ..  ]
-[; ;Car_demo.c: 120: Usart_Init();
-"120
-[e ( _Usart_Init ..  ]
-[; ;Car_demo.c: 121: Motor_GPIO_Init();
-"121
-[e ( _Motor_GPIO_Init ..  ]
-[; ;Car_demo.c: 122: csb_init();
-"122
-[e ( _csb_init ..  ]
-[; ;Car_demo.c: 124: Motor_CCP_PWM_Init();
-"124
-[e ( _Motor_CCP_PWM_Init ..  ]
-[; ;Car_demo.c: 126: Delay_ms(5000);
-"126
-[e ( _Delay_ms (1 -> -> 5000 `i `ui ]
-[; ;Car_demo.c: 127: printf("串口初始化完成!\r\n");
-"127
-[e ( _printf :s 3C ]
-[; ;Car_demo.c: 128: Motor_Speed_Set(PWM1,PWM2);
-"128
-[e ( _Motor_Speed_Set (2 , _PWM1 _PWM2 ]
-[; ;Car_demo.c: 129: Encoder_Init();
-"129
-[e ( _Encoder_Init ..  ]
-[; ;Car_demo.c: 130: Velociy_PID_Init();
-"130
-[e ( _Velociy_PID_Init ..  ]
-[; ;Car_demo.c: 132: csb();
-"132
-[e ( _csb ..  ]
-[; ;Car_demo.c: 133: while(1)
-"133
-[e :U 111 ]
-[; ;Car_demo.c: 134: {
+[; ;Car_demo.c: 134: TRISA0=0;
 "134
-{
-[; ;Car_demo.c: 136: Speed_left = 40 - Trace_PID();
+[e = _TRISA0 -> -> 0 `i `b ]
+[; ;Car_demo.c: 135: TRISA1=0;
+"135
+[e = _TRISA1 -> -> 0 `i `b ]
+[; ;Car_demo.c: 136: TRISE0=1;
 "136
-[e = _Speed_left -> - -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 137: Speed_right = 40 + Trace_PID();
+[e = _TRISE0 -> -> 1 `i `b ]
+[; ;Car_demo.c: 137: TRISE1=1;
 "137
-[e = _Speed_right -> + -> 40 `i ( _Trace_PID ..  `uc ]
-[; ;Car_demo.c: 138: Motor_Speed_Set(Speed_left,Speed_right);
+[e = _TRISE1 -> -> 1 `i `b ]
+[; ;Car_demo.c: 138: TRISE2=1;
 "138
-[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
-[; ;Car_demo.c: 139: LCD1602_WriteNum(2,7,Speed,3);
+[e = _TRISE2 -> -> 1 `i `b ]
+[; ;Car_demo.c: 139: TRISA4=1;
 "139
-[e ( _LCD1602_WriteNum (4 , , , -> -> 2 `i `uc -> -> 7 `i `uc -> _Speed `ui -> -> 3 `i `uc ]
-[; ;Car_demo.c: 140: LCD1602_WriteNum(1,7,RE0,1);
+[e = _TRISA4 -> -> 1 `i `b ]
+[; ;Car_demo.c: 140: TRISC0=1;
 "140
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 7 `i `uc -> -> _RE0 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 141: LCD1602_WriteNum(1,8,RE1,1);
+[e = _TRISC0 -> -> 1 `i `b ]
+[; ;Car_demo.c: 141: TRISC3=1;
 "141
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 8 `i `uc -> -> _RE1 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 142: LCD1602_WriteNum(1,9,RE2,1);
+[e = _TRISC3 -> -> 1 `i `b ]
+[; ;Car_demo.c: 142: TRISC4=1;
 "142
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 9 `i `uc -> -> _RE2 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 143: LCD1602_WriteNum(1,10,RA4,1);
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;Car_demo.c: 143: TRISC5=1;
 "143
-[e ( _LCD1602_WriteNum (4 , , , -> -> 1 `i `uc -> -> 10 `i `uc -> -> _RA4 `i `ui -> -> 1 `i `uc ]
-[; ;Car_demo.c: 144: printf("Speed:%d\r\n",(unsigned int)Speed);
+[e = _TRISC5 -> -> 1 `i `b ]
+[; ;Car_demo.c: 144: TRISB3=1;
 "144
-[e ( _printf , (. :s 4C -> _Speed `ui ]
-"145
-}
-[e :U 110 ]
-"133
-[e $U 111  ]
-[e :U 112 ]
-[; ;Car_demo.c: 145: }
-[; ;Car_demo.c: 146: }
+[e = _TRISB3 -> -> 1 `i `b ]
+[; ;Car_demo.c: 146: LCD1602_GPIO_Init();
 "146
-[e :UE 109 ]
+[e ( _LCD1602_GPIO_Init ..  ]
+[; ;Car_demo.c: 147: LCD1602_Init();
+"147
+[e ( _LCD1602_Init ..  ]
+[; ;Car_demo.c: 148: LCD1602_WriteString(1,0,"CAR 1");
+"148
+[e ( _LCD1602_WriteString (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> :s 1C `*uc ]
+[; ;Car_demo.c: 149: LCD1602_WriteString(2,0,"Speed:");
+"149
+[e ( _LCD1602_WriteString (3 , , -> -> 2 `i `uc -> -> 0 `i `uc -> :s 2C `*uc ]
+[; ;Car_demo.c: 151: Usart_GPIO_Init();
+"151
+[e ( _Usart_GPIO_Init ..  ]
+[; ;Car_demo.c: 152: Usart_Init();
+"152
+[e ( _Usart_Init ..  ]
+[; ;Car_demo.c: 154: Motor_GPIO_Init();
+"154
+[e ( _Motor_GPIO_Init ..  ]
+[; ;Car_demo.c: 155: Motor_CCP_PWM_Init();
+"155
+[e ( _Motor_CCP_PWM_Init ..  ]
+[; ;Car_demo.c: 156: csb_init();
+"156
+[e ( _csb_init ..  ]
+[; ;Car_demo.c: 158: Delay_ms(5000);
+"158
+[e ( _Delay_ms (1 -> -> 5000 `i `ui ]
+[; ;Car_demo.c: 159: printf("串口初始化完成!\r\n");
+"159
+[e ( _printf :s 3C ]
+[; ;Car_demo.c: 160: Motor_Speed_Set(PWM1,PWM2);
+"160
+[e ( _Motor_Speed_Set (2 , _PWM1 _PWM2 ]
+[; ;Car_demo.c: 161: Encoder_Init();
+"161
+[e ( _Encoder_Init ..  ]
+[; ;Car_demo.c: 162: while(1)
+"162
+[e :U 132 ]
+[; ;Car_demo.c: 163: {
+"163
+{
+[; ;Car_demo.c: 165: if(Circle_Mode == 0)
+"165
+[e $ ! == -> _Circle_Mode `i -> 0 `i 134  ]
+[; ;Car_demo.c: 166: {
+"166
+{
+[; ;Car_demo.c: 167: Motor_Speed_Set(40,40);
+"167
+[e ( _Motor_Speed_Set (2 , -> 40 `i -> 40 `i ]
+[; ;Car_demo.c: 169: if(Start_PD() == -99)
+"169
+[e $ ! == ( _Start_PD ..  -U -> 99 `i 135  ]
+[; ;Car_demo.c: 170: {
+"170
+{
+[; ;Car_demo.c: 171: Start_Find_flag = 1;
+"171
+[e = _Start_Find_flag -> -> 1 `i `uc ]
+"172
+}
+[e :U 135 ]
+[; ;Car_demo.c: 172: }
+[; ;Car_demo.c: 174: if(Encoder_Counter > 200)
+"174
+[e $ ! > _Encoder_Counter -> -> 200 `i `ui 136  ]
+[; ;Car_demo.c: 175: {
+"175
+{
+[; ;Car_demo.c: 176: Start_Find_flag = 0;
+"176
+[e = _Start_Find_flag -> -> 0 `i `uc ]
+[; ;Car_demo.c: 177: Encoder_Counter=0;
+"177
+[e = _Encoder_Counter -> -> 0 `i `ui ]
+[; ;Car_demo.c: 178: Circle_Mode = 1;
+"178
+[e = _Circle_Mode -> -> 1 `i `uc ]
+"179
+}
+[e :U 136 ]
+"180
+}
+[; ;Car_demo.c: 179: }
+[; ;Car_demo.c: 180: }
+[e $U 137  ]
+"181
+[e :U 134 ]
+[; ;Car_demo.c: 181: else if(Circle_Mode == 1)
+[e $ ! == -> _Circle_Mode `i -> 1 `i 138  ]
+[; ;Car_demo.c: 182: {
+"182
+{
+[; ;Car_demo.c: 183: if(Start_PD() == -99)
+"183
+[e $ ! == ( _Start_PD ..  -U -> 99 `i 139  ]
+[; ;Car_demo.c: 184: {
+"184
+{
+[; ;Car_demo.c: 185: Start_Find_flag =1;
+"185
+[e = _Start_Find_flag -> -> 1 `i `uc ]
+"186
+}
+[e :U 139 ]
+[; ;Car_demo.c: 186: }
+[; ;Car_demo.c: 188: if(Start_Find_flag == 1)
+"188
+[e $ ! == -> _Start_Find_flag `i -> 1 `i 140  ]
+[; ;Car_demo.c: 189: {
+"189
+{
+[; ;Car_demo.c: 190: Motor_Speed_Set(40,40);
+"190
+[e ( _Motor_Speed_Set (2 , -> 40 `i -> 40 `i ]
+[; ;Car_demo.c: 191: if(Encoder_Counter > 200)
+"191
+[e $ ! > _Encoder_Counter -> -> 200 `i `ui 141  ]
+[; ;Car_demo.c: 192: {
+"192
+{
+[; ;Car_demo.c: 193: IO_flag = 1;
+"193
+[e = _IO_flag -> -> 1 `i `uc ]
+[; ;Car_demo.c: 194: Encoder_Counter=0;
+"194
+[e = _Encoder_Counter -> -> 0 `i `ui ]
+[; ;Car_demo.c: 195: Circle_Mode = 2;
+"195
+[e = _Circle_Mode -> -> 2 `i `uc ]
+"196
+}
+[e :U 141 ]
+"197
+}
+[; ;Car_demo.c: 196: }
+[; ;Car_demo.c: 197: }
+[e $U 142  ]
+"198
+[e :U 140 ]
+[; ;Car_demo.c: 198: else
+[; ;Car_demo.c: 199: {
+"199
+{
+[; ;Car_demo.c: 201: Turn_PWM = Trace_PID();
+"201
+[e = _Turn_PWM ( _Trace_PID ..  ]
+[; ;Car_demo.c: 202: Speed_left = 40 - Turn_PWM;
+"202
+[e = _Speed_left -> - -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 203: Speed_right = 40 + Turn_PWM;
+"203
+[e = _Speed_right -> + -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 204: Motor_Speed_Set(Speed_left,Speed_right);
+"204
+[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
+"205
+}
+[e :U 142 ]
+"206
+}
+[; ;Car_demo.c: 205: }
+[; ;Car_demo.c: 206: }
+[e $U 143  ]
+"207
+[e :U 138 ]
+[; ;Car_demo.c: 207: else if(Circle_Mode == 2)
+[e $ ! == -> _Circle_Mode `i -> 2 `i 144  ]
+[; ;Car_demo.c: 208: {
+"208
+{
+[; ;Car_demo.c: 209: if(IO_flag == 0)
+"209
+[e $ ! == -> _IO_flag `i -> 0 `i 145  ]
+[; ;Car_demo.c: 210: {
+"210
+{
+[; ;Car_demo.c: 211: if(Start_PD() == -99)
+"211
+[e $ ! == ( _Start_PD ..  -U -> 99 `i 146  ]
+[; ;Car_demo.c: 212: {
+"212
+{
+[; ;Car_demo.c: 213: Start_Find_flag = 1;
+"213
+[e = _Start_Find_flag -> -> 1 `i `uc ]
+"214
+}
+[e :U 146 ]
+[; ;Car_demo.c: 214: }
+[; ;Car_demo.c: 216: if(Start_Find_flag)
+"216
+[e $ ! != -> _Start_Find_flag `i -> -> -> 0 `i `uc `i 147  ]
+[; ;Car_demo.c: 217: {
+"217
+{
+[; ;Car_demo.c: 218: Motor_Speed_Set(40,40);
+"218
+[e ( _Motor_Speed_Set (2 , -> 40 `i -> 40 `i ]
+[; ;Car_demo.c: 219: if(Encoder_Counter > 120)
+"219
+[e $ ! > _Encoder_Counter -> -> 120 `i `ui 148  ]
+[; ;Car_demo.c: 220: {
+"220
+{
+[; ;Car_demo.c: 221: Start_Find_flag = 0;
+"221
+[e = _Start_Find_flag -> -> 0 `i `uc ]
+[; ;Car_demo.c: 222: IO_flag = 0;
+"222
+[e = _IO_flag -> -> 0 `i `uc ]
+[; ;Car_demo.c: 223: Encoder_Counter=0;
+"223
+[e = _Encoder_Counter -> -> 0 `i `ui ]
+[; ;Car_demo.c: 224: Circle_Mode = 3;
+"224
+[e = _Circle_Mode -> -> 3 `i `uc ]
+"225
+}
+[e :U 148 ]
+"226
+}
+[; ;Car_demo.c: 225: }
+[; ;Car_demo.c: 226: }
+[e $U 149  ]
+"227
+[e :U 147 ]
+[; ;Car_demo.c: 227: else
+[; ;Car_demo.c: 228: {
+"228
+{
+[; ;Car_demo.c: 230: Turn_PWM = Trace_PID();
+"230
+[e = _Turn_PWM ( _Trace_PID ..  ]
+[; ;Car_demo.c: 231: Speed_left = 40 - Turn_PWM;
+"231
+[e = _Speed_left -> - -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 232: Speed_right = 40 + Turn_PWM;
+"232
+[e = _Speed_right -> + -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 233: Motor_Speed_Set(Speed_left,Speed_right);
+"233
+[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
+"234
+}
+[e :U 149 ]
+"235
+}
+[; ;Car_demo.c: 234: }
+[; ;Car_demo.c: 235: }
+[e $U 150  ]
+"236
+[e :U 145 ]
+[; ;Car_demo.c: 236: else
+[; ;Car_demo.c: 237: {
+"237
+{
+[; ;Car_demo.c: 238: if(Encoder_Counter > 320)
+"238
+[e $ ! > _Encoder_Counter -> -> 320 `i `ui 151  ]
+[; ;Car_demo.c: 239: {
+"239
+{
+[; ;Car_demo.c: 240: Start_Find_flag = 0;
+"240
+[e = _Start_Find_flag -> -> 0 `i `uc ]
+[; ;Car_demo.c: 241: Encoder_Counter=0;
+"241
+[e = _Encoder_Counter -> -> 0 `i `ui ]
+[; ;Car_demo.c: 242: IO_flag = 0;
+"242
+[e = _IO_flag -> -> 0 `i `uc ]
+"243
+}
+[e :U 151 ]
+[; ;Car_demo.c: 243: }
+[; ;Car_demo.c: 244: Motor_Speed_Set(20,60);
+"244
+[e ( _Motor_Speed_Set (2 , -> 20 `i -> 60 `i ]
+"245
+}
+[e :U 150 ]
+"246
+}
+[; ;Car_demo.c: 245: }
+[; ;Car_demo.c: 246: }
+[e $U 152  ]
+"247
+[e :U 144 ]
+[; ;Car_demo.c: 247: else if(Circle_Mode == 3)
+[e $ ! == -> _Circle_Mode `i -> 3 `i 153  ]
+[; ;Car_demo.c: 248: {
+"248
+{
+[; ;Car_demo.c: 249: if(Start_PD() == -99)
+"249
+[e $ ! == ( _Start_PD ..  -U -> 99 `i 154  ]
+[; ;Car_demo.c: 250: {
+"250
+{
+[; ;Car_demo.c: 251: Start_Find_flag = 1;
+"251
+[e = _Start_Find_flag -> -> 1 `i `uc ]
+[; ;Car_demo.c: 252: Stop_Flag=1;
+"252
+[e = _Stop_Flag -> -> 1 `i `uc ]
+"253
+}
+[e :U 154 ]
+[; ;Car_demo.c: 253: }
+[; ;Car_demo.c: 255: if(Stop_Flag == 1)
+"255
+[e $ ! == -> _Stop_Flag `i -> 1 `i 155  ]
+[; ;Car_demo.c: 256: {
+"256
+{
+[; ;Car_demo.c: 257: Motor_Speed_Set(0,0);
+"257
+[e ( _Motor_Speed_Set (2 , -> 0 `i -> 0 `i ]
+"258
+}
+[; ;Car_demo.c: 258: }
+[e $U 156  ]
+"259
+[e :U 155 ]
+[; ;Car_demo.c: 259: else
+[; ;Car_demo.c: 260: {
+"260
+{
+[; ;Car_demo.c: 261: Turn_PWM = Trace_PID();
+"261
+[e = _Turn_PWM ( _Trace_PID ..  ]
+[; ;Car_demo.c: 262: Speed_left = 40 - Turn_PWM;
+"262
+[e = _Speed_left -> - -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 263: Speed_right = 40 + Turn_PWM;
+"263
+[e = _Speed_right -> + -> 40 `i _Turn_PWM `uc ]
+[; ;Car_demo.c: 264: Motor_Speed_Set(Speed_left,Speed_right);
+"264
+[e ( _Motor_Speed_Set (2 , -> _Speed_left `i -> _Speed_right `i ]
+"265
+}
+[e :U 156 ]
+"266
+}
+[e :U 153 ]
+"267
+[e :U 152 ]
+[e :U 143 ]
+[e :U 137 ]
+}
+[e :U 131 ]
+"162
+[e $U 132  ]
+[e :U 133 ]
+[; ;Car_demo.c: 265: }
+[; ;Car_demo.c: 266: }
+[; ;Car_demo.c: 267: }
+[; ;Car_demo.c: 268: }
+"268
+[e :UE 130 ]
 }
 [a 2C 83 112 101 101 100 58 0 ]
 [a 1C 67 65 82 32 49 0 ]
-[a 4C 83 112 101 101 100 58 37 100 13 10 0 ]
 [a 3C 180 174 191 218 179 245 202 188 187 175 205 234 179 201 33 13 10 0 ]

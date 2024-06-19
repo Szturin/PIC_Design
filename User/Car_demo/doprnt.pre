@@ -259,13 +259,7 @@ extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
 
-# 350 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\lib\doprnt.c"
-const static unsigned int dpowers[] = {1, 10, 100, 1000, 10000,
-
-# 355
-};
-
-# 451
+# 451 "C:\Program Files (x86)\HI-TECH Software\PICC\9.82\lib\doprnt.c"
 int
 
 # 460
@@ -312,11 +306,6 @@ switch(c = *f++) {
 case 0:
 goto alldone;
 
-# 700
-case 'd':
-case 'i':
-break;
-
 # 787
 case 'c':
 
@@ -333,48 +322,10 @@ continue;
 # 825
 }
 
-# 1248
-{
-
-# 1254
-_val._val = (int)(*(int *)__va_arg((*(int **)ap), (int)0));
-
-if((int)_val._val < 0) {
-flag |= 0x03;
-_val._val = -_val._val;
-}
-
-}
-
-# 1300
-for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
-if(_val._val < dpowers[c])
-break;
-
 # 1417
 {
 
-# 1433
-if(flag & 0x03)
-(putch('-') );
-
 # 1464
-}
-
-
-prec = c;
-
-while(prec--) {
-
-# 1473
-{
-
-# 1484
-c = (_val._val / dpowers[prec]) % 10 + '0';
-
-# 1515
-}
-(putch(c) );
 }
 
 # 1525

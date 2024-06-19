@@ -21,14 +21,6 @@ __CONFIG(0xFF29);//配置起始位
 #include "..\..\System\Timer.H"//定时器初始化程序
 #include "..\..\System\Delay.H"//延时子程序
 
-/*电机引脚宏定义接口*/
-#define Motor_PWM_A RC2
-#define Motor_PWM_B RC1
-#define Motor_LogicA_1 RB4
-#define Motor_LogicA_2 RB5
-#define Motor_LogicB_1 RB6
-#define Motor_LogicB_2 RB7
-
 unsigned char bluetooth;//蓝牙接收字节存储变量
 
 int PWM1=0,PWM2=0;//PWM输出
@@ -38,7 +30,7 @@ int PWM;//速度环PWM
 unsigned int Counter_temp;//车辆旋转圈数计数变量
 unsigned int Timer0_Counter;//定时器0溢出计数变量
 unsigned char m;
-unsigned char Encoder_Counter;//脉冲计数
+unsigned int Encoder_Counter;//脉冲计数
 
 unsigned char Motor_Flag;//电机允许模式
 int Speed;//速度测量值
@@ -47,57 +39,90 @@ int Turn;//转向设置值
 
 unsigned char Trace_Byte;
 
-unsigned char ack;
 
-unsigned char Speed_left,Speed_right;
+unsigned char Speed_left,Speed_right;//寻线速度
+unsigned char Speed_Velcolity;//直行速度
 
-unsigned char distance;
+unsigned int distance;
+
+unsigned char yz[8]={0};
+unsigned char mod;
+
+unsigned char KeyNum;
+
+unsigned int odomoter_counter;
+
+int Turn_PWM;
+
+unsigned char IO_flag=0;//
+unsigned char Circle_Mode=0;
+unsigned char Start_Find_flag=0;
+unsigned char Bifurcate_Flag=0;//分叉路口标志位，0表示第一个，1表示第二个
+unsigned char Stop_Flag;
+
+void yanzheng()//循迹验证
+{
+	unsigned char temp = mod;
+	for(int i=0;i<8;i++)
+	{
+		yz[i] = temp %2;
+		temp/=2;
+	}	
+}
+
 
 /*中断服务程序*/
 void interrupt Service()
 {	
-	Speed_left = 40 - Trace_PID();
-	Speed_right = 40 + Trace_PID();
-	Motor_Speed_Set(Speed_left,Speed_right);
 		
 	if(RCIF==1)//串口接收中断
 	{
 		bluetooth=RCREG;
 		
 		if(bluetooth == '#'){}
-		
-		/*遥控测试程序*/
-		/*
-		if(bluetooth == 'W'){Speed_Set=50;Turn=0;Motor_Flag=1;}
-		if(bluetooth == 'Q'){Speed_Set=0;Turn=0;Motor_Flag=0;}
-		if(bluetooth == 'S'){Speed_Set=-50;Turn=0;Motor_Flag=1;}
-		if(bluetooth == 'A'){Turn=-20;Motor_Flag=2;}
-		if(bluetooth == 'D'){Turn=20;Motor_Flag=2;}Motor_Speed_Set(PWM1,PWM2);
-		*/
-		
-		
 		RCIF=0;
 	}
 	else if(T0IF==1)//定时器0中断
 	{	
 		TMR0=60;
 		T0IF=0;
-		
-		Speed = Encoder_Counter;
-		Encoder_Counter=0;
-		
-		PWM = Velocity_PID(Speed,Speed_Set);
-		
-		PWM1 = PWM;
-		PWM2 = PWM;
 	}
 	else if(INTF==1)//外部中断
 	{
-		Encoder_Counter++;
+		if(Start_Find_flag)
+		{
+			Encoder_Counter++;
+		}
 	    INTF=0;//清除外部中断标志位	    	
 	}
+	else if(RBIF == 1)
+	{
+		RBIF=0;
+	}	
+	TMR1IF=0;
 }
 
+int Start_PD()
+{
+	unsigned char Trace_Mode = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+	switch(Trace_Mode)
+	{
+		case 0B11000001:
+		case 0B10000011:
+		case 0B00000000:
+		case 0B10000001:
+			return -99;
+		case 0B01111110:
+		case 0B01111100:
+		case 0B00111100:
+		case 0B00111110:
+		case 0B00111101:
+		case 0B10111101:
+			return -66;
+		default:
+			return 0;
+	}
+}		
 
 /*主函数*/
 void main()
@@ -110,37 +135,280 @@ void main()
 	TRISE1=1;
 	TRISE2=1;
 	TRISA4=1;
+	TRISC0=1;
+	TRISC3=1;
+	TRISC4=1;
+	TRISC5=1;
+	TRISB3=1;
 	
 	LCD1602_GPIO_Init();//LCD1602引脚初始化
 	LCD1602_Init();//LCD1602初始化    
 	LCD1602_WriteString(1,0,"CAR 1");
-	LCD1602_WriteString(2,0,"Speed:");
-
-	Usart_GPIO_Init();//串口GPIO初始化
-	Usart_Init();//串口初始化
-	Motor_GPIO_Init();//电机GPIO口初始化
-	csb_init();//超声波
+	LCD1602_WriteString(2,0,"Speed:");//
 	
-	Motor_CCP_PWM_Init();//初始化CCP1、2为PWM输出模式
+	Usart_GPIO_Init();//串口GPIO初始化//
+	Usart_Init();//串口初始化//	
+	
+	Motor_GPIO_Init();//电机GPIO口初始化//
+	Motor_CCP_PWM_Init();//初始化CCP1、2为PWM输出模式//
+	csb_init();//超声波
 	
 	Delay_ms(5000);//延时2s，等待单片机工作稳定，蓝牙成功配对
 	printf("串口初始化完成!\r\n");
-	Motor_Speed_Set(PWM1,PWM2);
+	Motor_Speed_Set(PWM1,PWM2);//
 	Encoder_Init();
-	Velociy_PID_Init();
-	
-	csb();
 	while(1)
 	{
 		/*LCD1602打印*/
-		Speed_left = 40 - Trace_PID();
-		Speed_right = 40 + Trace_PID();
-		Motor_Speed_Set(Speed_left,Speed_right);		
-		LCD1602_WriteNum(2,7,Speed,3);
-		LCD1602_WriteNum(1,7,RE0,1);
-		LCD1602_WriteNum(1,8,RE1,1);
-		LCD1602_WriteNum(1,9,RE2,1);
-		LCD1602_WriteNum(1,10,RA4,1);
-		printf("Speed:%d\r\n",(unsigned int)Speed);
+		if(Circle_Mode == 0)//起始点
+		{
+			Motor_Speed_Set(40,40);
+			
+			if(Start_PD() == -99)//起始线扫描判断
+			{	
+				Start_Find_flag = 1;//脉冲计数标志位
+			}
+			
+			if(Encoder_Counter > 200)//脉冲里程
+			{
+				Start_Find_flag = 0;
+				Encoder_Counter=0;
+				Circle_Mode = 1;
+			}
+		}	
+		else if(Circle_Mode == 1)//第一圈，外圈
+		{
+			if(Start_PD() == -99)//起始线扫描判断
+			{
+				Start_Find_flag =1;
+			}
+			
+			if(Start_Find_flag == 1)
+			{
+				Motor_Speed_Set(40,40);
+				if(Encoder_Counter > 200)//脉冲里程
+				{
+					IO_flag = 1;
+					Encoder_Counter=0;
+					Circle_Mode = 2;//内圈
+				}					
+			}
+			else
+			{
+				//正常巡线
+				Turn_PWM = Trace_PID();
+				Speed_left = 40 - Turn_PWM;
+				Speed_right = 40 + Turn_PWM;
+				Motor_Speed_Set(Speed_left,Speed_right);					
+			}
+		}
+		else if(Circle_Mode == 2)//第二圈，内圈
+		{
+			if(IO_flag == 0)//正常巡线
+			{
+				if(Start_PD() == -99)//起始线扫描判断
+				{
+					Start_Find_flag = 1;
+				}
+				
+				if(Start_Find_flag)
+				{
+					Motor_Speed_Set(40,40);
+					if(Encoder_Counter > 120)//脉冲里程
+					{
+						Start_Find_flag = 0;
+						IO_flag = 0;
+						Encoder_Counter=0;
+						Circle_Mode = 3;
+					}					
+				}
+				else
+				{
+					//正常巡线
+					Turn_PWM = Trace_PID();
+					Speed_left = 40 - Turn_PWM;
+					Speed_right = 40 + Turn_PWM;
+					Motor_Speed_Set(Speed_left,Speed_right);					
+				}
+			}	
+			else//内圈固定转向
+			{
+				if(Encoder_Counter > 320)
+				{
+					Start_Find_flag = 0;
+					Encoder_Counter=0;
+					IO_flag = 0;
+				}
+				Motor_Speed_Set(20,60);	
+			}
+		}
+		else if(Circle_Mode == 3)//第三圈，外圈
+		{
+			if(Start_PD() == -99)//起始线扫描判断
+			{
+				Start_Find_flag = 1;			
+				Stop_Flag=1;
+			}
+				
+			if(Stop_Flag == 1)
+			{
+				Motor_Speed_Set(0,0);
+			}
+			else
+			{
+				Turn_PWM = Trace_PID();
+				Speed_left = 40 - Turn_PWM;
+				Speed_right = 40 + Turn_PWM;
+				Motor_Speed_Set(Speed_left,Speed_right);					
+			}
+		}	
 	}
 }
+
+
+
+
+
+		/*
+		if(Circle_Mode == 0)//起始点
+		{
+			Motor_Speed_Set(40,40);
+			
+			if(Start_PD() == -99)//起始线扫描判断
+			{	
+				Start_Find_flag = 1;//脉冲计数标志位
+			}
+			
+			if(Encoder_Counter > 120)//脉冲里程
+			{
+				Encoder_Counter=0;
+				IO_flag = 1;
+				Circle_Mode = 1;
+			}
+		}
+		else if(Circle_Mode == 1)//第一圈，内圈
+		{
+			if(IO_flag == 0)//正常巡线
+			{
+				if(Start_PD() == -99)//起始线扫描判断
+				{
+					Start_Find_flag = 1;
+				}
+				
+				if(Start_Find_flag)
+				{
+					Motor_Speed_Set(40,40);
+					if(Encoder_Counter > 120)//脉冲里程
+					{
+						Start_Find_flag = 0;
+						IO_flag = 0;
+						Encoder_Counter=0;
+						Circle_Mode = 2;
+					}					
+				}
+				else
+				{
+					//正常巡线
+					Turn_PWM = Trace_PID();
+					Speed_left = 40 - Turn_PWM;
+					Speed_right = 40 + Turn_PWM;
+					Motor_Speed_Set(Speed_left,Speed_right);					
+				}
+			}	
+			else//内圈固定转向
+			{
+				if(Encoder_Counter > 280)
+				{
+					Start_Find_flag = 0;
+					Encoder_Counter=0;
+					IO_flag = 0;
+				}
+				Motor_Speed_Set(20,60);	
+			}
+		}
+		else if(Circle_Mode == 2)//第二圈，外圈
+		{
+			if(Start_PD() == -99)//起始线扫描判断
+			{
+				Start_Find_flag =1;
+			}
+			
+			if(Start_Find_flag == 1)
+			{
+				Motor_Speed_Set(40,40);
+				if(Encoder_Counter > 400)//脉冲里程
+				{
+					IO_flag = 1;
+					Encoder_Counter=0;
+					Circle_Mode = 3;//内圈
+				}					
+			}
+			else
+			{
+				//正常巡线
+				Turn_PWM = Trace_PID();
+				Speed_left = 40 - Turn_PWM;
+				Speed_right = 40 + Turn_PWM;
+				Motor_Speed_Set(Speed_left,Speed_right);					
+			}
+		}
+		else if(Circle_Mode == 3)//第三圈，内圈
+		{
+			if(IO_flag == 0)//正常巡线
+			{
+				if(Start_PD() == -99)//起始线扫描判断
+				{
+					Start_Find_flag = 1;			
+					Stop_Flag=1;
+				}
+				
+				if(Stop_Flag == 1)
+				{
+					Motor_Speed_Set(0,0);
+				}
+				else
+				{
+					Turn_PWM = Trace_PID();
+					Speed_left = 40 - Turn_PWM;
+					Speed_right = 40 + Turn_PWM;
+					Motor_Speed_Set(Speed_left,Speed_right);					
+				}
+			}	
+			else//内圈分叉路固定转向
+			{
+				if(Encoder_Counter > 400)
+				{
+					Start_Find_flag = 0;
+					Encoder_Counter=0;
+					IO_flag = 0;
+				}
+				Motor_Speed_Set(20,60);	
+			}
+		}
+		*/
+		
+	//	printf("Mode:%d,Fencha:%d\n",(unsigned int)Circle_Mode,(unsigned int)Bifurcate_Flag);
+		
+		//  LCD1602_WriteNum(1,8,distance,3);
+		//	LCD1602_WriteNum(2,8,Encoder_Counter,5);
+		//	LCD1602_WriteNum(1,8,Circle_Mode,1);
+			
+		//  mod = (RC0<<7|RC3<<6|RE0<<5|RE1<<4|RE2<<3|RA4<<2|RC4<<1|RC5);
+		//	PORTD = mod;
+		
+		/*
+		yanzheng();
+		
+		LCD1602_WriteNum(2,1,yz[0],1);
+		LCD1602_WriteNum(2,2,yz[1],1);
+		LCD1602_WriteNum(2,3,yz[2],1);
+		LCD1602_WriteNum(2,4,yz[3],1);
+		LCD1602_WriteNum(2,5,yz[4],1);
+		LCD1602_WriteNum(2,6,yz[5],1);
+		LCD1602_WriteNum(2,7,yz[6],1);
+		LCD1602_WriteNum(2,8,yz[7],1);
+		*/
+		
+		//LCD1602_WriteNum(1,8,KeyNum,2);
+		
+		//printf("Speed:%d\r\n",(unsigned int)Speed);

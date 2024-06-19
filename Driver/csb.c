@@ -20,10 +20,14 @@ void Delay12us()		//@4.000MHz
 
 void csb_init()//超声波初始化
 {	
-	GIE=1;PEIE=1;TMR1IE=1;TMR1IF=0;
+	GIE=1;
+	PEIE=1;
+	//TMR1IE=1;
+	TMR1IF=0;
 
-	TRISE1=0;TRISE2=1;
-	ADCON1=7;TRISA=0;TRISD=0;
+	TRISA1=1;
+	TRISA0=0;
+	ADCON1=7;TRISD=0;
 
 	trig = 0;
 	echo = 1;
@@ -49,7 +53,7 @@ unsigned int csb()//echo平时为低电平 当接收到超声波输出高电平 高电平时间代入公式
 
 	while(!echo);//等待低电平上跳高电平
 	TMR1ON=1;
-	while(echo == 1 && TMR1IF == 0);
+	while((echo == 1) && (TMR1IF == 0));
 	ah = TMR1H;
 	al = TMR1L;
 	TMR1ON=0;

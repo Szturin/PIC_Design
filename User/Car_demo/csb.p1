@@ -1792,139 +1792,143 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;csb.c: 22: {
 [e :U _csb_init ]
 [f ]
-[; ;csb.c: 23: GIE=1;PEIE=1;TMR1IE=1;TMR1IF=0;
+[; ;csb.c: 23: GIE=1;
 "23
 [e = _GIE -> -> 1 `i `b ]
+[; ;csb.c: 24: PEIE=1;
+"24
 [e = _PEIE -> -> 1 `i `b ]
-[e = _TMR1IE -> -> 1 `i `b ]
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;csb.c: 25: TRISE1=0;TRISE2=1;
-"25
-[e = _TRISE1 -> -> 0 `i `b ]
-[e = _TRISE2 -> -> 1 `i `b ]
-[; ;csb.c: 26: ADCON1=7;TRISA=0;TRISD=0;
+[; ;csb.c: 26: TMR1IF=0;
 "26
-[e = _ADCON1 -> -> 7 `i `uc ]
-[e = _TRISA -> -> 0 `i `uc ]
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;csb.c: 28: RA0 = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;csb.c: 28: TRISA1=1;
 "28
-[e = _RA0 -> -> 0 `i `b ]
-[; ;csb.c: 29: RA1 = 1;
+[e = _TRISA1 -> -> 1 `i `b ]
+[; ;csb.c: 29: TRISA0=0;
 "29
-[e = _RA1 -> -> 1 `i `b ]
-[; ;csb.c: 31: T1CON=0B00000000;
-"31
-[e = _T1CON -> -> 0 `i `uc ]
-[; ;csb.c: 32: TMR1H=0x00;
+[e = _TRISA0 -> -> 0 `i `b ]
+[; ;csb.c: 30: ADCON1=7;TRISD=0;
+"30
+[e = _ADCON1 -> -> 7 `i `uc ]
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;csb.c: 32: RA0 = 0;
 "32
-[e = _TMR1H -> -> 0 `i `uc ]
-[; ;csb.c: 33: TMR1L=0x00;
+[e = _RA0 -> -> 0 `i `b ]
+[; ;csb.c: 33: RA1 = 1;
 "33
-[e = _TMR1L -> -> 0 `i `uc ]
-[; ;csb.c: 34: TMR1ON=0x00;
-"34
-[e = _TMR1ON -> -> 0 `i `b ]
-[; ;csb.c: 35: }
+[e = _RA1 -> -> 1 `i `b ]
+[; ;csb.c: 35: T1CON=0B00000000;
 "35
+[e = _T1CON -> -> 0 `i `uc ]
+[; ;csb.c: 36: TMR1H=0x00;
+"36
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;csb.c: 37: TMR1L=0x00;
+"37
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;csb.c: 38: TMR1ON=0x00;
+"38
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 39: }
+"39
 [e :UE 105 ]
 }
-"38
+"42
 [v _csb `(ui  1 ef ]
 {
-[; ;csb.c: 37: unsigned int csb()
-[; ;csb.c: 38: {
+[; ;csb.c: 41: unsigned int csb()
+[; ;csb.c: 42: {
 [e :U _csb ]
 [f ]
-"39
+"43
 [v _time `ui  1 a ]
-"40
+"44
 [v _ah `uc  1 a ]
 [v _al `uc  1 a ]
-[; ;csb.c: 39: unsigned int time;
-[; ;csb.c: 40: unsigned char ah,al;
-[; ;csb.c: 41: dis = 0;
-"41
+[; ;csb.c: 43: unsigned int time;
+[; ;csb.c: 44: unsigned char ah,al;
+[; ;csb.c: 45: dis = 0;
+"45
 [e = _dis -> -> 0 `i `ui ]
-[; ;csb.c: 42: TMR1ON = 0;
-"42
-[e = _TMR1ON -> -> 0 `i `b ]
-[; ;csb.c: 43: TMR1H = 0x00;
-"43
-[e = _TMR1H -> -> 0 `i `uc ]
-[; ;csb.c: 44: TMR1L = 0x00;
-"44
-[e = _TMR1L -> -> 0 `i `uc ]
-[; ;csb.c: 46: RA0 = 1;
+[; ;csb.c: 46: TMR1ON = 0;
 "46
-[e = _RA0 -> -> 1 `i `b ]
-[; ;csb.c: 47: Delay12us();
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 47: TMR1H = 0x00;
 "47
-[e ( _Delay12us ..  ]
-[; ;csb.c: 48: RA0 = 0;
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;csb.c: 48: TMR1L = 0x00;
 "48
-[e = _RA0 -> -> 0 `i `b ]
-[; ;csb.c: 50: while(!RA1);
+[e = _TMR1L -> -> 0 `i `uc ]
+[; ;csb.c: 50: RA0 = 1;
 "50
+[e = _RA0 -> -> 1 `i `b ]
+[; ;csb.c: 51: Delay12us();
+"51
+[e ( _Delay12us ..  ]
+[; ;csb.c: 52: RA0 = 0;
+"52
+[e = _RA0 -> -> 0 `i `b ]
+[; ;csb.c: 54: while(!RA1);
+"54
 [e $U 107  ]
 [e :U 108 ]
 [e :U 107 ]
 [e $ ! _RA1 108  ]
 [e :U 109 ]
-[; ;csb.c: 51: TMR1ON=1;
-"51
+[; ;csb.c: 55: TMR1ON=1;
+"55
 [e = _TMR1ON -> -> 1 `i `b ]
-[; ;csb.c: 52: while(RA1 == 1 && TMR1IF == 0);
-"52
+[; ;csb.c: 56: while((RA1 == 1) && (TMR1IF == 0));
+"56
 [e $U 110  ]
 [e :U 111 ]
 [e :U 110 ]
 [e $ && == -> _RA1 `i -> 1 `i == -> _TMR1IF `i -> 0 `i 111  ]
 [e :U 112 ]
-[; ;csb.c: 53: ah = TMR1H;
-"53
-[e = _ah _TMR1H ]
-[; ;csb.c: 54: al = TMR1L;
-"54
-[e = _al _TMR1L ]
-[; ;csb.c: 55: TMR1ON=0;
-"55
-[e = _TMR1ON -> -> 0 `i `b ]
-[; ;csb.c: 56: if(TMR1IF == 0)
-"56
-[e $ ! == -> _TMR1IF `i -> 0 `i 113  ]
-[; ;csb.c: 57: {
+[; ;csb.c: 57: ah = TMR1H;
 "57
-{
-[; ;csb.c: 58: time = ah<<8|al;
+[e = _ah _TMR1H ]
+[; ;csb.c: 58: al = TMR1L;
 "58
-[e = _time -> | << -> _ah `i -> 8 `i -> _al `i `ui ]
-[; ;csb.c: 59: return (time*0.01723);
+[e = _al _TMR1L ]
+[; ;csb.c: 59: TMR1ON=0;
 "59
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;csb.c: 60: if(TMR1IF == 0)
+"60
+[e $ ! == -> _TMR1IF `i -> 0 `i 113  ]
+[; ;csb.c: 61: {
+"61
+{
+[; ;csb.c: 62: time = ah<<8|al;
+"62
+[e = _time -> | << -> _ah `i -> 8 `i -> _al `i `ui ]
+[; ;csb.c: 63: return (time*0.01723);
+"63
 [e ) -> * -> _time `d .0.01723 `ui ]
 [e $UE 106  ]
-"60
-}
-[; ;csb.c: 60: }
-[e $U 114  ]
-"61
-[e :U 113 ]
-[; ;csb.c: 61: else
-[; ;csb.c: 62: {
-"62
-{
-[; ;csb.c: 63: TMR1IF = 0;
-"63
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;csb.c: 64: return 0;
 "64
+}
+[; ;csb.c: 64: }
+[e $U 114  ]
+"65
+[e :U 113 ]
+[; ;csb.c: 65: else
+[; ;csb.c: 66: {
+"66
+{
+[; ;csb.c: 67: TMR1IF = 0;
+"67
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;csb.c: 68: return 0;
+"68
 [e ) -> -> 0 `i `ui ]
 [e $UE 106  ]
-"65
+"69
 }
 [e :U 114 ]
-[; ;csb.c: 65: }
-[; ;csb.c: 66: }
-"66
+[; ;csb.c: 69: }
+[; ;csb.c: 70: }
+"70
 [e :UE 106 ]
 }

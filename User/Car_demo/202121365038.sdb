@@ -5438,11 +5438,11 @@
 `uc 1 EEPGD 1 0 :1:7 
 ]
 [u S10424 . 1 `S1208 1 . 1 0 ]
-"57 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
-[v F1227 `(v  1 t 0 ]
+"181 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v F1230 `(v  1 t 0 ]
 "528 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\lib\doprnt.c
-[s S10473 . 4 `*DCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
-[u S10476 . 4 `ui 1 _val 2 0 `S10473 1 _str 4 0 ]
+[s S10478 . 4 `*DCuc 1 _cp 2 0 `ui 1 _len 2 2 ]
+[u S10481 . 4 `ui 1 _val 2 0 `S10478 1 _str 4 0 ]
 "461
 [v _printf `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\abdiv.c
@@ -5615,11 +5615,15 @@
 [v _TIM1_Init `(v  1 e 0 0 ]
 "27
 [v _TIM2_Init `(v  1 e 0 0 ]
-"57 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"55 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Start_PD `(ui  1 e 2 0 ]
+"74
+[v _Trace_Control `(v  1 e 0 0 ]
+"181
 [v _Service `I(v  1 e 0 0 ]
-"89
-[v _Start_PD `(i  1 e 2 0 ]
-"107
+"216
+[v _Self_Check `(v  1 e 0 0 ]
+"227
 [v _main `(v  1 e 0 0 ]
 "7 eeprom.c
 [v _eecpymem `(v  1 e 0 0 ]
@@ -6388,16 +6392,98 @@
 [v _Bifurcate_Flag `uc  1 e 1 0 ]
 "38
 [v _Stop_Flag `uc  1 e 1 0 ]
-"107
+"39
+[v _Trace_Mode `uc  1 e 1 0 ]
+"227
 [v _main `(v  1 e 0 0 ]
 {
-"230
+"252
+} 0
+"74
+[v _Trace_Control `(v  1 e 0 0 ]
+{
+"177
+} 0
+"33 D:\6_pic_project\00_Design_Flow_Car\Driver\pid.c
+[v _Trace_PID `(i  1 e 2 0 ]
+{
+"94
+} 0
+"33 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign `uc  1 a 1 27 ]
+"33
+[v ___awtoft@c `i  1 p 2 22 ]
+"42
+} 0
+"52 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+{
+"54
+[v ___ftmul@f3_as_product `um  1 a 3 39 ]
+"53
+[v ___ftmul@sign `uc  1 a 1 43 ]
+[v ___ftmul@cntr `uc  1 a 1 42 ]
+[v ___ftmul@exp `uc  1 a 1 38 ]
+"52
+[v ___ftmul@f1 `f  1 p 3 28 ]
+[v ___ftmul@f2 `f  1 p 3 31 ]
+"84
+} 0
+"87 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 `uc  1 a 1 56 ]
+[v ___ftadd@exp2 `uc  1 a 1 55 ]
+[v ___ftadd@sign `uc  1 a 1 54 ]
+"87
+[v ___ftadd@f1 `f  1 p 3 44 ]
+[v ___ftadd@f2 `f  1 p 3 47 ]
+"148
 } 0
 "4 D:\6_pic_project\00_Design_Flow_Car\System\Delay.c
 [v _Delay_ms `(v  1 e 0 0 ]
 {
 [v Delay_ms@x `ui  1 p 2 0 ]
 "9
+} 0
+"45 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval `ul  1 a 4 17 ]
+"46
+[v ___fttol@exp1 `uc  1 a 1 21 ]
+[v ___fttol@sign1 `uc  1 a 1 16 ]
+"45
+[v ___fttol@f1 `f  1 p 3 8 ]
+"73
+} 0
+"63 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\float.c
+[v ___ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg `um  1 p 3 0 ]
+[v ___ftpack@exp `uc  1 p 1 3 ]
+[v ___ftpack@sign `uc  1 p 1 4 ]
+"86
+} 0
+"3 C:\Program Files (x86)\HI-TECH Software\PICC\9.82\sources\wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+{
+"4
+[v ___wmul@product `ui  1 a 2 4 ]
+"3
+[v ___wmul@multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand `ui  1 p 2 2 ]
+"13
+} 0
+"55 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+[v _Start_PD `(ui  1 e 2 0 ]
+{
+"71
 } 0
 "22 D:\6_pic_project\00_Design_Flow_Car\Driver\csb.c
 [v _csb_init `(v  1 e 0 0 ]
@@ -6424,6 +6510,13 @@
 {
 "40
 } 0
+"22
+[v _putch `(v  1 e 0 0 ]
+{
+[v putch@ch `uc  1 a 1 wreg ]
+[v putch@ch `uc  1 a 1 wreg ]
+"25
+} 0
 "60 D:\6_pic_project\00_Design_Flow_Car\Driver\Motor.c
 [v _Motor_Speed_Set `(v  1 e 0 0 ]
 {
@@ -6441,8 +6534,8 @@
 {
 "28
 } 0
-"57 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
+"181 D:\6_pic_project\00_Design_Flow_Car\User\Car_demo\Car_demo.c
 [v _Service `I(v  1 e 0 0 ]
 {
-"86
+"212
 } 0

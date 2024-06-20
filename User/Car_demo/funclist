@@ -1,12 +1,22 @@
-_csb_init: CODE, 308 0 21
-_Usart_Init: CODE, 388 0 16
-_main: CODE, 117 0 78
-_Encoder_Init: CODE, 404 0 15
-_Delay_ms: CODE, 285 0 23
-_Usart_GPIO_Init: CODE, 456 0 5
-_Motor_GPIO_Init: CODE, 439 0 9
-_Trace_GPIO_Init: CODE, 419 0 11
-_Motor_Speed_Set: CODE, 195 0 59
-_Service: CODE, 21 0 96
-_Motor_CCP_PWM_Init: CODE, 349 0 20
-Total: 353
+_Start_PD: CODE, 1853 0 118
+_csb_init: CODE, 3764 0 21
+_putch: CODE, 2034 0 14
+_Trace_PID: CODE, 589 0 409
+___ftpack: CODE, 1728 0 125
+_Usart_Init: CODE, 3690 0 16
+_main: CODE, 1971 0 63
+___ftadd: CODE, 998 0 326
+_Trace_Control: CODE, 21 0 568
+_Encoder_Init: CODE, 3675 0 15
+_Delay_ms: CODE, 3785 0 23
+_Usart_GPIO_Init: CODE, 3642 0 5
+_Motor_GPIO_Init: CODE, 3655 0 9
+_Trace_GPIO_Init: CODE, 3664 0 11
+_Motor_Speed_Set: CODE, 3941 0 59
+_Service: CODE, 4000 0 96
+___ftmul: CODE, 1324 0 238
+_Motor_CCP_PWM_Init: CODE, 3744 0 20
+___awtoft: CODE, 3852 0 44
+___wmul: CODE, 3808 0 44
+___fttol: CODE, 1562 0 166
+Total: 2390
